@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Emergency Medical Information & Regional Helplines - General guidance, emergency contacts, first aid basics, and medical disclaimers.">
+  <title>Emergency Information & Helplines | HygienePulse</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+        <span>HygienePulse</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="health-awareness.html" class="nav-link">Health Awareness</a></li>
+        <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
+        <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="emergency.html" class="nav-link active">Emergency</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header style="background: radial-gradient(circle at top right, var(--accent-rose-light), transparent 60%); padding: 3rem 0; border-bottom: 1px solid var(--border-color);">
+    <div class="container text-center" style="text-align: center;">
+      <span class="section-tag" style="background: var(--accent-rose-light); color: var(--accent-rose);"><i class="fas fa-kit-medical"></i> Urgent Assistance</span>
+      <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">Emergency Information & Helplines</h1>
+      <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+        Quick access to emergency response numbers, first-aid protocols, and essential healthcare advisories.
+      </p>
+    </div>
+  </header>
+
+  <!-- MEDICAL DISCLAIMER NOTICE -->
+  <section class="section" style="padding-bottom: 1rem;">
+    <div class="container">
+      <div class="emergency-banner">
+        <i class="fas fa-shield-cat emergency-icon"></i>
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-rose); margin-bottom: 0.5rem;">
+            Important Medical Disclaimer
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            This website is an educational CSE mini-project created for awareness purposes only. <strong>It does not provide medical diagnoses, treatment advice, or clinical consultations.</strong> In case of a medical emergency, acute illness, or severe injury, immediately call local emergency services or visit the nearest hospital or qualified medical professional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGIONAL HELPLINES -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Direct Lines</span>
+        <h2 class="section-title">Emergency Toll-Free Helplines</h2>
+        <p class="section-description">Keep these nationwide emergency contact numbers readily accessible.</p>
+      </div>
+
+      <div class="helpline-grid">
+        <!-- Helpline 1 -->
+        <div class="helpline-card">
+          <div class="helpline-icon">
+            <i class="fas fa-truck-medical"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700;">National Ambulance Service</h4>
+            <p class="helpline-num">102 / 108</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">24/7 Medical Emergency Transit</p>
+          </div>
+        </div>
+
+        <!-- Helpline 2 -->
+        <div class="helpline-card">
+          <div class="helpline-icon">
+            <i class="fas fa-phone-volume"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700;">National Emergency Number</h4>
+            <p class="helpline-num">112</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">All-in-One Emergency Dispatch</p>
+          </div>
+        </div>
+
+        <!-- Helpline 3 -->
+        <div class="helpline-card">
+          <div class="helpline-icon">
+            <i class="fas fa-user-doctor"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700;">Health Advisory Helpline</h4>
+            <p class="helpline-num">104</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">General Health & Tele-consultation</p>
+          </div>
+        </div>
+
+        <!-- Helpline 4 -->
+        <div class="helpline-card">
+          <div class="helpline-icon">
+            <i class="fas fa-skull-crossbones"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700;">Poison Control & Toxin Information</h4>
+            <p class="helpline-num">1800-116-117</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Chemical & Toxic Exposure Advice</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRST AID BASICS -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">First Aid Protocols</span>
+        <h2 class="section-title">Basic First-Aid Steps</h2>
+        <p class="section-description">Immediate initial measures to stabilize injuries before professional medical help arrives.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Dehydration ORS -->
+        <div class="card">
+          <div class="card-icon teal">
+            <i class="fas fa-bottle-water"></i>
+          </div>
+          <h3 class="card-title">Oral Rehydration (ORS)</h3>
+          <p class="card-text">For severe diarrhea or heat exhaustion, mix 1 liter of clean water with 6 teaspoons of sugar and 1/2 teaspoon of salt. Sip continuously.</p>
+        </div>
+
+        <!-- Minor Wounds -->
+        <div class="card">
+          <div class="card-icon blue">
+            <i class="fas fa-bandage"></i>
+          </div>
+          <h3 class="card-title">Minor Cuts & Wounds</h3>
+          <p class="card-text">Wash hands first, rinse wound with clean running water, apply gentle pressure with sterile gauze, apply antiseptic ointment, and bandage.</p>
+        </div>
+
+        <!-- Minor Burns -->
+        <div class="card">
+          <div class="card-icon amber">
+            <i class="fas fa-temperature-arrow-down"></i>
+          </div>
+          <h3 class="card-title">Thermal Minor Burns</h3>
+          <p class="card-text">Cool the burn immediately under cool running tap water for 10-15 minutes. Never apply ice directly or pop blisters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+            <span>HygienePulse</span>
+          </a>
+          <p>An educational web portal promoting public sanitization, personal hygiene, and health awareness. CSE Mini-Project.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sanitization.html">Sanitization Awareness</a></li>
+            <li><a href="health-awareness.html">Health Awareness</a></li>
+            <li><a href="tips.html">Daily Health Tips</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Interactive Tools</h4>
+          <ul class="footer-links">
+            <li><a href="quiz.html">Awareness Quiz</a></li>
+            <li><a href="campaigns.html">Campaign Calendar</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+            <li><a href="about.html">About & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Medical Disclaimer</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">This site is for educational purposes only and does not provide medical diagnosis or substitute professional clinical advice.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="scrollTopBtn" title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

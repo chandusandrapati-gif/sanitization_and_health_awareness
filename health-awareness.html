@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Health Awareness & Disease Prevention - Understand hygiene-related illnesses, preventive habits, routine vaccinations, and clinical red flags.">
+  <title>Health Awareness & Disease Prevention | HygienePulse</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+        <span>HygienePulse</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="health-awareness.html" class="nav-link active">Health Awareness</a></li>
+        <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
+        <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header style="background: radial-gradient(circle at top right, var(--accent-blue-light), transparent 60%); padding: 3rem 0; border-bottom: 1px solid var(--border-color);">
+    <div class="container text-center" style="text-align: center;">
+      <span class="section-tag"><i class="fas fa-heart-pulse"></i> Preventive Health Module</span>
+      <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">Disease Prevention & Healthy Living</h1>
+      <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+        Understand transmission vectors for common infectious diseases, adopt disease-prevention habits, follow immunization schedules, and know when to seek clinical care.
+      </p>
+    </div>
+  </header>
+
+  <!-- COMMON HYGIENE ILLNESSES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Disease Awareness</span>
+        <h2 class="section-title">Common Hygiene-Related Illnesses</h2>
+        <p class="section-description">Knowledge is your primary shield. Learn how these diseases spread and how simple sanitation halts transmission.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Disease 1 -->
+        <div class="card">
+          <div class="card-icon rose">
+            <i class="fas fa-bacteria"></i>
+          </div>
+          <h3 class="card-title">Diarrheal Diseases & Cholera</h3>
+          <p class="card-text">Caused by consuming food or water contaminated with bacterial pathogens like <i>Vibrio cholerae</i> or <i>E. coli</i>.</p>
+          <div style="background: var(--bg-primary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+            <strong style="color:var(--text-primary);"><i class="fas fa-shield-halved" style="color:var(--accent-teal);"></i> Prevention:</strong> Drink boiled/filtered water, wash hands thoroughly before meals, use clean sanitation facilities.
+          </div>
+        </div>
+
+        <!-- Disease 2 -->
+        <div class="card">
+          <div class="card-icon amber">
+            <i class="fas fa-mosquito"></i>
+          </div>
+          <h3 class="card-title">Dengue & Malaria</h3>
+          <p class="card-text">Vector-borne viral/parasitic infections transmitted through mosquito bites in areas with stagnant standing water.</p>
+          <div style="background: var(--bg-primary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+            <strong style="color:var(--text-primary);"><i class="fas fa-shield-halved" style="color:var(--accent-teal);"></i> Prevention:</strong> Drain standing water weekly, use mosquito nets, wear long sleeves, apply repellent.
+          </div>
+        </div>
+
+        <!-- Disease 3 -->
+        <div class="card">
+          <div class="card-icon blue">
+            <i class="fas fa-head-side-cough"></i>
+          </div>
+          <h3 class="card-title">Influenza & Respiratory Infections</h3>
+          <p class="card-text">Airborne viral contagions that spread rapidly through respiratory droplets from coughs, sneezes, or unwashed hands.</p>
+          <div style="background: var(--bg-primary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+            <strong style="color:var(--text-primary);"><i class="fas fa-shield-halved" style="color:var(--accent-teal);"></i> Prevention:</strong> Wear masks in crowded spaces, practice elbow coughing, sanitize high-touch surfaces.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALTHY LIFESTYLE PILLARS -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Wellness Principles</span>
+        <h2 class="section-title">4 Pillars of Everyday Immunity</h2>
+        <p class="section-description">A strong natural immune system works hand-in-hand with external hygiene practices.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="display:flex; flex-direction:row; gap:1.25rem; align-items:center;">
+          <div class="card-icon teal" style="margin:0; flex-shrink:0;">
+            <i class="fas fa-glass-water"></i>
+          </div>
+          <div>
+            <h4 style="font-weight:700; font-size:1.1rem;">1. Optimal Hydration</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary);">Drinking 2 to 3 liters of clean water daily flushes toxins, maintains mucosal barriers, and boosts energy.</p>
+          </div>
+        </div>
+
+        <div class="card" style="display:flex; flex-direction:row; gap:1.25rem; align-items:center;">
+          <div class="card-icon green" style="margin:0; flex-shrink:0;">
+            <i class="fas fa-carrot"></i>
+          </div>
+          <div>
+            <h4 style="font-weight:700; font-size:1.1rem;">2. Nutrient-Dense Diet</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary);">Consume fresh fruits, leafy vegetables, nuts, and proteins rich in Vitamin C, Zinc, and antioxidants.</p>
+          </div>
+        </div>
+
+        <div class="card" style="display:flex; flex-direction:row; gap:1.25rem; align-items:center;">
+          <div class="card-icon blue" style="margin:0; flex-shrink:0;">
+            <i class="fas fa-bed"></i>
+          </div>
+          <div>
+            <h4 style="font-weight:700; font-size:1.1rem;">3. Restorative Sleep</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary);">7 to 8 hours of uninterrupted night sleep enables cellular repair and antibody synthesis.</p>
+          </div>
+        </div>
+
+        <div class="card" style="display:flex; flex-direction:row; gap:1.25rem; align-items:center;">
+          <div class="card-icon amber" style="margin:0; flex-shrink:0;">
+            <i class="fas fa-person-running"></i>
+          </div>
+          <div>
+            <h4 style="font-weight:700; font-size:1.1rem;">4. Daily Physical Movement</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary);">30 minutes of brisk walking, cycling, or yoga improves blood circulation and stress regulation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHEN TO SEEK MEDICAL HELP -->
+  <section class="section">
+    <div class="container">
+      <div class="emergency-banner" style="margin-bottom:0;">
+        <i class="fas fa-user-doctor emergency-icon"></i>
+        <div>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">
+            When to Seek Professional Medical Care
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
+            Do not rely solely on home remedies when experiencing severe symptoms. Consult a licensed physician or visit a hospital immediately if you notice:
+          </p>
+          <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; color: var(--text-primary); font-weight: 600; font-size: 0.9rem;">
+            <li><i class="fas fa-triangle-exclamation" style="color:var(--accent-rose);"></i> Fever above 102°F (38.9°C) lasting > 3 days</li>
+            <li><i class="fas fa-triangle-exclamation" style="color:var(--accent-rose);"></i> Severe shortness of breath or chest pain</li>
+            <li><i class="fas fa-triangle-exclamation" style="color:var(--accent-rose);"></i> Inability to keep fluids down (severe dehydration)</li>
+            <li><i class="fas fa-triangle-exclamation" style="color:var(--accent-rose);"></i> Confusion, extreme lethargy, or blue lips</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+            <span>HygienePulse</span>
+          </a>
+          <p>An educational web portal promoting public sanitization, personal hygiene, and health awareness. CSE Mini-Project.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sanitization.html">Sanitization Awareness</a></li>
+            <li><a href="health-awareness.html">Health Awareness</a></li>
+            <li><a href="tips.html">Daily Health Tips</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Interactive Tools</h4>
+          <ul class="footer-links">
+            <li><a href="quiz.html">Awareness Quiz</a></li>
+            <li><a href="campaigns.html">Campaign Calendar</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+            <li><a href="about.html">About & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Medical Disclaimer</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">This site is for educational purposes only and does not provide medical diagnosis or substitute professional clinical advice.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="scrollTopBtn" title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

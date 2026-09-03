@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Project & Contact - CSE Mini-Project specifications, mission goals, technology stack, and interactive contact form.">
+  <title>About Project & Contact | HygienePulse</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+        <span>HygienePulse</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="health-awareness.html" class="nav-link">Health Awareness</a></li>
+        <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
+        <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header style="background: radial-gradient(circle at top right, var(--accent-teal-light), transparent 60%); padding: 3rem 0; border-bottom: 1px solid var(--border-color);">
+    <div class="container text-center" style="text-align: center;">
+      <span class="section-tag"><i class="fas fa-code"></i> CSE Mini-Project</span>
+      <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">About Sanitization & Health Portal</h1>
+      <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+        Developed as an academic Computer Science & Engineering (CSE) web development mini-project demonstrating modern frontend technology, responsive UI/UX, and client-side storage.
+      </p>
+    </div>
+  </header>
+
+  <!-- PROJECT VISION & TECH STACK -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <!-- Vision Card -->
+        <div class="card">
+          <div class="card-icon teal">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="card-title">Project Mission & Objectives</h3>
+          <p class="card-text">To empower students, families, and communities with clear, accessible, and actionable health education to reduce preventable hygiene-related illnesses.</p>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); font-size: 0.95rem;">
+            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Interactive Quiz Engine:</strong> Self-assessment tool with real-time scoring.</li>
+            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Daily Rotator & Favorites:</strong> LocalStorage tip bookmarking system.</li>
+            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Responsive Design:</strong> Optimized for smartphones, tablets, and desktops.</li>
+          </ul>
+        </div>
+
+        <!-- Tech Stack Card -->
+        <div class="card">
+          <div class="card-icon blue">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3 class="card-title">Technical Architecture</h3>
+          <p class="card-text">Built strictly with standard web technologies following clean code principles for demonstration and viva presentation.</p>
+          
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+            <span class="badge badge-teal"><i class="fab fa-html5"></i> HTML5 Semantic Elements</span>
+            <span class="badge badge-blue"><i class="fab fa-css3-alt"></i> CSS3 Variables & Flex/Grid</span>
+            <span class="badge badge-amber"><i class="fab fa-js"></i> Vanilla ES6 JavaScript</span>
+            <span class="badge badge-green"><i class="fas fa-database"></i> Browser LocalStorage API</span>
+            <span class="badge badge-rose"><i class="fas fa-icons"></i> Font Awesome 6 Icons</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & FAQ -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container hero-grid">
+      <!-- Contact Form -->
+      <div>
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Send Us Your Feedback</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Have suggestions for improving health content or adding new features? Reach out below.</p>
+
+        <form id="contactForm" onsubmit="handleContactSubmit(event)" class="card" style="padding: 2rem;">
+          <div class="form-group">
+            <label class="form-label" for="cName">Your Name</label>
+            <input type="text" id="cName" class="form-control" placeholder="e.g. Ananya Roy" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cEmail">Email Address</label>
+            <input type="email" id="cEmail" class="form-control" placeholder="e.g. ananya@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cSubject">Subject</label>
+            <input type="text" id="cSubject" class="form-control" placeholder="e.g. Suggestion for Quiz Question" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cMessage">Message</label>
+            <textarea id="cMessage" class="form-control" placeholder="Write your feedback or message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div>
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Common queries regarding website usage and data privacy.</p>
+
+        <div class="accordion">
+          <div class="accordion-item active">
+            <button class="accordion-header">
+              <span>Is my quiz score or saved tips data uploaded to a server?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              No. All data including saved favorite tips, light/dark mode preference, and quiz high scores are stored locally inside your browser using the HTML5 <code>localStorage</code> API. No server is required.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>How does the Daily Health Tip rotator work?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              The Daily Tip system computes a hash derived from the current day of the year. Every 24 hours at midnight, it automatically displays a new featured health tip from our curated tip dataset.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Can I use this codebase for my CSE mini-project?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              Yes! The code is clean, modular, and beginner-friendly. It is organized into <code>index.html</code>, <code>css/style.css</code>, and modular <code>js/</code> files for easy explanation during project defense.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Does this website replace medical consultations?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              No. The content provided is strictly educational. It does not provide medical diagnoses or replace consultations with licensed healthcare professionals.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+            <span>HygienePulse</span>
+          </a>
+          <p>An educational web portal promoting public sanitization, personal hygiene, and health awareness. CSE Mini-Project.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sanitization.html">Sanitization Awareness</a></li>
+            <li><a href="health-awareness.html">Health Awareness</a></li>
+            <li><a href="tips.html">Daily Health Tips</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Interactive Tools</h4>
+          <ul class="footer-links">
+            <li><a href="quiz.html">Awareness Quiz</a></li>
+            <li><a href="campaigns.html">Campaign Calendar</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+            <li><a href="about.html">About & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Medical Disclaimer</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">This site is for educational purposes only and does not provide medical diagnosis or substitute professional clinical advice.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="scrollTopBtn" title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('cName').value;
+      showToast(`Thank you ${name}! Your feedback has been received.`, 'success');
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+</body>
+</html>

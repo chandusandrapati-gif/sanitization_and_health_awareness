@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanitization & Health Awareness Portal - Learn about personal hygiene, disease prevention, clean water, waste segregation, and daily health habits. CSE Mini-Project.">
+  <title>Sanitization & Health Awareness Portal | Home</title>
+  
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+        <span>HygienePulse</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="health-awareness.html" class="nav-link">Health Awareness</a></li>
+        <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
+        <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="section-tag"><i class="fas fa-shield-virus"></i> Community Health & Hygiene Initiative</span>
+        <h1 class="hero-title">Empowering Lives Through <span>Sanitization & Health Awareness</span></h1>
+        <p class="hero-subtitle">Discover simple, practical, and science-backed health habits. Empower your school, home, and community with essential knowledge on clean water, hand hygiene, and disease prevention.</p>
+        
+        <div class="hero-cta">
+          <a href="sanitization.html" class="btn btn-primary">
+            Explore Hygiene Guide <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="quiz.html" class="btn btn-secondary">
+            Take Awareness Quiz <i class="fas fa-graduation-cap"></i>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>20s</h4>
+            <p>Scrub Duration</p>
+          </div>
+          <div class="stat-item">
+            <h4>99%</h4>
+            <p>Germ Reduction</p>
+          </div>
+          <div class="stat-item">
+            <h4>10+</h4>
+            <p>Interactive Tips</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="assets/images/hero_banner.jpg" alt="Health and Sanitization Awareness Visual" class="hero-img">
+        <div class="floating-card">
+          <div class="card-icon teal" style="width:40px; height:40px; margin:0; font-size:1rem;">
+            <i class="fas fa-check-double"></i>
+          </div>
+          <div>
+            <h5 style="font-size:0.9rem; font-weight:700;">Clean Hands Save Lives</h5>
+            <p style="font-size:0.75rem; color:var(--text-secondary);">Daily 20-second handwashing reduces infections by up to 50%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DAILY HEALTH TIP FEATURE -->
+  <section class="section">
+    <div class="container">
+      <div id="dailyTipCard" class="daily-tip-banner">
+        <!-- Loaded via tips.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACCESS CARDS -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Core Modules</span>
+        <h2 class="section-title">Essential Health & Hygiene Pillars</h2>
+        <p class="section-description">Navigate our key educational portals designed for students, families, and communities.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="card-icon teal">
+            <i class="fas fa-hands-bubbles"></i>
+          </div>
+          <h3 class="card-title">Sanitization Awareness</h3>
+          <p class="card-text">Step-by-step visual handwashing techniques, drinking water treatment methods, and waste segregation strategies.</p>
+          <a href="sanitization.html" class="btn btn-sm btn-outline">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="card-icon blue">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
+          <h3 class="card-title">Health Awareness</h3>
+          <p class="card-text">Recognize common hygiene-related illnesses, preventive lifestyle habits, vaccination timelines, and medical guidance.</p>
+          <a href="health-awareness.html" class="btn btn-sm btn-outline">Explore Topics <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="card-icon amber">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="card-title">Daily Health Tips</h3>
+          <p class="card-text">Filterable tip library, daily rotating health advice, copy-to-clipboard, and favorite tip bookmarking tool.</p>
+          <a href="tips.html" class="btn btn-sm btn-outline">View Tips <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="card-icon green">
+            <i class="fas fa-circle-question"></i>
+          </div>
+          <h3 class="card-title">Awareness Quiz</h3>
+          <p class="card-text">Test your understanding with 10 interactive multiple-choice questions, instant visual feedback, and personal high score tracking.</p>
+          <a href="quiz.html" class="btn btn-sm btn-outline">Start Quiz <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+          <div class="card-icon teal">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 class="card-title">Community Campaigns</h3>
+          <p class="card-text">Discover key sanitation awareness dates (World Hand Hygiene Day), local cleanliness drives, and volunteer initiatives.</p>
+          <a href="campaigns.html" class="btn btn-sm btn-outline">View Campaigns <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+          <div class="card-icon rose">
+            <i class="fas fa-triangle-exclamation"></i>
+          </div>
+          <h3 class="card-title">Emergency Info</h3>
+          <p class="card-text">Quick reference regional medical emergency helplines, first-aid basics, and crucial healthcare disclaimers.</p>
+          <a href="emergency.html" class="btn btn-sm btn-outline">Emergency Contacts <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT INFOGRAPHIC PREVIEW -->
+  <section class="section">
+    <div class="container hero-grid">
+      <div class="hero-image-wrapper">
+        <img src="assets/images/handwash_guide.jpg" alt="Step by step handwashing visual infographic" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+      </div>
+      <div>
+        <span class="section-tag">Infographic Guide</span>
+        <h2 class="section-title">Proper Handwashing in 6 Simple Steps</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Washing hands with soap and water removes microbes, prevents hospital and community infections, and stops disease outbreaks.</p>
+
+        <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+          <li style="display:flex; align-items:center; gap:0.75rem; font-size:1rem; font-weight:500;">
+            <i class="fas fa-circle-check" style="color: var(--accent-green);"></i> Wet hands with clean running water & apply adequate soap.
+          </li>
+          <li style="display:flex; align-items:center; gap:0.75rem; font-size:1rem; font-weight:500;">
+            <i class="fas fa-circle-check" style="color: var(--accent-green);"></i> Rub palms together, interlace fingers, scrub backs & under nails.
+          </li>
+          <li style="display:flex; align-items:center; gap:0.75rem; font-size:1rem; font-weight:500;">
+            <i class="fas fa-circle-check" style="color: var(--accent-green);"></i> Rinse thoroughly with running water and dry completely with a clean towel.
+          </li>
+        </ul>
+
+        <a href="sanitization.html" class="btn btn-primary">Read Full Sanitization Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+            <span>HygienePulse</span>
+          </a>
+          <p>An educational web portal promoting public sanitization, personal hygiene, and health awareness. CSE Mini-Project.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sanitization.html">Sanitization Awareness</a></li>
+            <li><a href="health-awareness.html">Health Awareness</a></li>
+            <li><a href="tips.html">Daily Health Tips</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Interactive Tools</h4>
+          <ul class="footer-links">
+            <li><a href="quiz.html">Awareness Quiz</a></li>
+            <li><a href="campaigns.html">Campaign Calendar</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+            <li><a href="about.html">About & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Medical Disclaimer</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">This site is for educational purposes only and does not provide medical diagnosis or substitute professional clinical advice.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project. Built with HTML, CSS, JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="scrollTopBtn" title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/tips.js"></script>
+</body>
+</html>

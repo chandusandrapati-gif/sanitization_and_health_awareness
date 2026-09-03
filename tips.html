@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daily Health & Hygiene Tips Library - Filterable tips, daily rotator, favorite tip manager, copy to clipboard.">
+  <title>Daily Health Tips & Library | HygienePulse</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+        <span>HygienePulse</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="health-awareness.html" class="nav-link">Health Awareness</a></li>
+        <li><a href="tips.html" class="nav-link active">Daily Tips</a></li>
+        <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header style="background: radial-gradient(circle at top right, var(--accent-amber-light), transparent 60%); padding: 3rem 0; border-bottom: 1px solid var(--border-color);">
+    <div class="container text-center" style="text-align: center;">
+      <span class="section-tag"><i class="fas fa-lightbulb"></i> Daily Knowledge Base</span>
+      <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">Health & Hygiene Tips Library</h1>
+      <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+        Explore quick, actionable advice for daily personal care, water safety, and food protection. Save your favorite tips for offline reference!
+      </p>
+    </div>
+  </header>
+
+  <!-- DAILY ROTATING TIP SPOTLIGHT -->
+  <section class="section" style="padding-bottom: 1rem;">
+    <div class="container">
+      <div id="dailyTipCard" class="daily-tip-banner">
+        <!-- Rendered dynamically by tips.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TIP LIBRARY & FILTERS -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="filter-pills">
+          <button class="pill-btn active" data-category="all">All Tips</button>
+          <button class="pill-btn" data-category="handwashing">Handwashing</button>
+          <button class="pill-btn" data-category="water">Water Safety</button>
+          <button class="pill-btn" data-category="food">Food Hygiene</button>
+          <button class="pill-btn" data-category="surroundings">Surroundings</button>
+          <button class="pill-btn" data-category="immunity">Immunity</button>
+          <button class="pill-btn" data-category="favorites" style="border-color: var(--accent-rose); color: var(--accent-rose);">
+            <i class="fas fa-heart"></i> Saved Favorites
+          </button>
+        </div>
+
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="tipSearchInput" placeholder="Search tips by keyword...">
+        </div>
+      </div>
+
+      <!-- GRID FOR TIPS -->
+      <div class="grid-3" id="tipsGrid">
+        <!-- Rendered dynamically by tips.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
+            <span>HygienePulse</span>
+          </a>
+          <p>An educational web portal promoting public sanitization, personal hygiene, and health awareness. CSE Mini-Project.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sanitization.html">Sanitization Awareness</a></li>
+            <li><a href="health-awareness.html">Health Awareness</a></li>
+            <li><a href="tips.html">Daily Health Tips</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Interactive Tools</h4>
+          <ul class="footer-links">
+            <li><a href="quiz.html">Awareness Quiz</a></li>
+            <li><a href="campaigns.html">Campaign Calendar</a></li>
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+            <li><a href="about.html">About & Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Medical Disclaimer</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">This site is for educational purposes only and does not provide medical diagnosis or substitute professional clinical advice.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="scrollTopBtn" title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/tips.js"></script>
+</body>
+</html>
