@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sanitization & Health Awareness Portal - Learn about personal hygiene, disease prevention, clean water, waste segregation, and daily health habits. CSE Mini-Project.">
-  <title>Sanitization & Health Awareness Portal | Home</title>
+  <meta name="description" content="HygienePulse - Public Health Awareness & Sanitization Platform. Learn about safe drinking water, hand hygiene, disease prevention, and community health. CSE Project.">
+  <title>HygienePulse | Safe Water, Sanitization & Public Health Platform</title>
   
   <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
+  <!-- STICKY NAVIGATION BAR -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
@@ -28,15 +28,19 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="#safe-water" class="nav-link">Safe Water</a></li>
         <li><a href="health-awareness.html" class="nav-link">Health Awareness</a></li>
         <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
         <li><a href="quiz.html" class="nav-link">Quiz</a></li>
         <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
-        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency Info</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
       </ul>
 
       <div class="nav-actions">
+        <a href="quiz.html" class="btn btn-sm btn-primary" style="display: inline-flex;">
+          <i class="fas fa-graduation-cap"></i> Take the Awareness Quiz
+        </a>
         <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
@@ -51,16 +55,16 @@
   <header class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="section-tag"><i class="fas fa-shield-virus"></i> Community Health & Hygiene Initiative</span>
-        <h1 class="hero-title">Empowering Lives Through <span>Sanitization & Health Awareness</span></h1>
-        <p class="hero-subtitle">Discover simple, practical, and science-backed health habits. Empower your school, home, and community with essential knowledge on clean water, hand hygiene, and disease prevention.</p>
+        <span class="section-tag"><i class="fas fa-shield-virus"></i> Community Health & Safe Water Initiative</span>
+        <h1 class="hero-title">Clean Habits. <span>Safe Water.</span> Healthier Lives.</h1>
+        <p class="hero-subtitle">Practicing proper hand hygiene, sanitization, and safe drinking water management is essential for preventing disease transmission and protecting families and communities.</p>
         
         <div class="hero-cta">
-          <a href="sanitization.html" class="btn btn-primary">
-            Explore Hygiene Guide <i class="fas fa-arrow-right"></i>
+          <a href="health-awareness.html" class="btn btn-primary">
+            Explore Health Awareness <i class="fas fa-arrow-right"></i>
           </a>
-          <a href="quiz.html" class="btn btn-secondary">
-            Take Awareness Quiz <i class="fas fa-graduation-cap"></i>
+          <a href="#safe-water" class="btn btn-secondary">
+            Learn About Safe Water <i class="fas fa-droplet"></i>
           </a>
         </div>
 
@@ -70,12 +74,12 @@
             <p>Scrub Duration</p>
           </div>
           <div class="stat-item">
-            <h4>99%</h4>
-            <p>Germ Reduction</p>
+            <h4>100°C</h4>
+            <p>Boil Temperature</p>
           </div>
           <div class="stat-item">
-            <h4>10+</h4>
-            <p>Interactive Tips</p>
+            <h4>99.9%</h4>
+            <p>Pathogen Removal</p>
           </div>
         </div>
       </div>
@@ -83,12 +87,12 @@
       <div class="hero-image-wrapper">
         <img src="assets/images/hero_banner.jpg" alt="Health and Sanitization Awareness Visual" class="hero-img">
         <div class="floating-card">
-          <div class="card-icon teal" style="width:40px; height:40px; margin:0; font-size:1rem;">
-            <i class="fas fa-check-double"></i>
+          <div class="card-icon teal" style="width:42px; height:42px; margin:0; font-size:1.1rem;">
+            <i class="fas fa-shield-halved"></i>
           </div>
           <div>
-            <h5 style="font-size:0.9rem; font-weight:700;">Clean Hands Save Lives</h5>
-            <p style="font-size:0.75rem; color:var(--text-secondary);">Daily 20-second handwashing reduces infections by up to 50%</p>
+            <h5 style="font-size:0.9rem; font-weight:700; color:var(--text-primary);">Clean Water & Hygiene Protection</h5>
+            <p style="font-size:0.75rem; color:var(--text-secondary);">Safe water handling reduces gastrointestinal infections by up to 60%</p>
           </div>
         </div>
       </div>
@@ -96,114 +100,329 @@
   </header>
 
   <!-- DAILY HEALTH TIP FEATURE -->
-  <section class="section">
+  <section class="section" style="padding: 2.5rem 0;">
     <div class="container">
       <div id="dailyTipCard" class="daily-tip-banner">
-        <!-- Loaded via tips.js -->
+        <!-- Loaded via js/tips.js -->
       </div>
     </div>
   </section>
 
-  <!-- QUICK ACCESS CARDS -->
+  <!-- SAFE DRINKING WATER - MAJOR SECTION -->
+  <section id="safe-water" class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-glass-water"></i> Safe Drinking Water Portal</span>
+        <h2 class="section-title">Safe Drinking Water</h2>
+        <p class="section-description">Understanding water contamination sources and implementing reliable household purification techniques to guarantee safe drinking water.</p>
+      </div>
+
+      <!-- Contamination Sources Grid -->
+      <div style="margin-bottom: 3rem;">
+        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-primary); text-align: center;">
+          <i class="fas fa-circle-exclamation" style="color: var(--accent-rose);"></i> What Makes Water Unsafe?
+        </h3>
+        
+        <div class="grid-3">
+          <div class="card" style="border-top: 4px solid var(--accent-rose);">
+            <div class="card-icon rose"><i class="fas fa-bacteria"></i></div>
+            <h3 class="card-title">Bacterial Contamination</h3>
+            <p class="card-text">Pathogens such as <em>Vibrio cholerae</em>, <em>E. coli</em>, and <em>Salmonella typhi</em> intrude through untreated sewage and agricultural runoff, causing acute waterborne illnesses.</p>
+          </div>
+
+          <div class="card" style="border-top: 4px solid var(--accent-amber);">
+            <div class="card-icon amber"><i class="fas fa-flask-vial"></i></div>
+            <h3 class="card-title">Chemical & Heavy Metals</h3>
+            <p class="card-text">Pesticides, nitrates, lead, and industrial effluent seep into groundwater, posing long-term organ toxicity and health hazards without proper filtration.</p>
+          </div>
+
+          <div class="card" style="border-top: 4px solid var(--accent-blue);">
+            <div class="card-icon blue"><i class="fas fa-box-open"></i></div>
+            <h3 class="card-title">Unsafe Household Storage</h3>
+            <p class="card-text">Storing purified water in open buckets or dipping unwashed hands/cups re-contaminates safe drinking water before consumption.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 Interactive Purification Method Cards -->
+      <div style="margin-bottom: 4rem;">
+        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-primary); text-align: center;">
+          <i class="fas fa-wand-magic-sparkles" style="color: var(--accent-teal);"></i> 5 Essential Water Treatment & Storage Practices
+        </h3>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon teal"><i class="fas fa-fire-burner"></i></div>
+            <h3 class="card-title">1. Boiling</h3>
+            <p class="card-text">Bring water to a continuous rolling boil for at least 1 full minute. Boiling destroys bacteria, viruses, and parasites effectively without chemical additives.</p>
+            <span class="badge badge-teal">Gold Standard</span>
+          </div>
+
+          <div class="card">
+            <div class="card-icon blue"><i class="fas fa-filter"></i></div>
+            <h3 class="card-title">2. Filtration</h3>
+            <p class="card-text">Use household ceramic, activated carbon, or RO filters to trap particulate matter, heavy metals, microplastics, and protozoan cysts.</p>
+            <span class="badge badge-blue">Particle Removal</span>
+          </div>
+
+          <div class="card">
+            <div class="card-icon green"><i class="fas fa-vial-circle-check"></i></div>
+            <h3 class="card-title">3. Chlorination</h3>
+            <p class="card-text">Water treatment tablets or approved sodium hypochlorite solutions disinfect large storage tanks, maintaining persistent antimicrobial residual protection.</p>
+            <span class="badge badge-green">Disinfection</span>
+          </div>
+
+          <div class="card">
+            <div class="card-icon amber"><i class="fas fa-sun"></i></div>
+            <h3 class="card-title">4. UV Treatment</h3>
+            <p class="card-text">Ultraviolet purifiers emit UV-C light that inactivates bacterial & viral DNA, rendering microbes harmless without altering water taste or mineral content.</p>
+            <span class="badge badge-amber">DNA Inactivation</span>
+          </div>
+
+          <div class="card">
+            <div class="card-icon rose"><i class="fas fa-faucet"></i></div>
+            <h3 class="card-title">5. Safe Storage</h3>
+            <p class="card-text">Store purified water in narrow-necked containers fitted with dispensing taps. Keep vessels covered and elevated off the floor.</p>
+            <span class="badge badge-rose">Re-contamination Barrier</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Water Contamination Pipeline Visualization -->
+      <div style="margin-bottom: 4rem;">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <span class="badge badge-blue">Interactive Visual Pipeline</span>
+          <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
+            Water Contamination & Treatment Journey
+          </h3>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Click on any step node in the pipeline below to see how water transitions from natural source to safe household consumption.</p>
+        </div>
+
+        <div id="pipelineVisualizer" class="pipeline-visualizer">
+          <!-- Loaded via js/water-checker.js -->
+        </div>
+      </div>
+
+      <!-- "Is Your Water Safe?" Interactive Awareness Checker -->
+      <div>
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <span class="badge badge-teal">Interactive Tool</span>
+          <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary); margin-top: 0.5rem;">
+            "Is Your Water Safe?" Awareness Checker
+          </h3>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Answer 4 quick educational questions to evaluate your household water treatment and storage habits.</p>
+        </div>
+
+        <div id="waterCheckerBox">
+          <!-- Loaded via js/water-checker.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE 9-STEP HANDWASHING EXPERIENCE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-hands-bubbles"></i> Guided Experience</span>
+        <h2 class="section-title">Interactive 9-Step Handwashing Experience</h2>
+        <p class="section-description">Master the complete 20-second hand scrubbing technique recommended by global public health authorities.</p>
+      </div>
+
+      <div id="handwashExperienceBox">
+        <!-- Loaded via js/handwash.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SANITIZATION DASHBOARD -->
   <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Core Modules</span>
-        <h2 class="section-title">Essential Health & Hygiene Pillars</h2>
-        <p class="section-description">Navigate our key educational portals designed for students, families, and communities.</p>
+        <span class="section-tag">Sanitization Dashboard</span>
+        <h2 class="section-title">Core Sanitization & Hygiene Pillars</h2>
+        <p class="section-description">Comprehensive guidelines for personal hygiene, environmental cleanliness, and disease vector elimination.</p>
       </div>
 
       <div class="grid-3">
-        <!-- Card 1 -->
         <div class="card">
-          <div class="card-icon teal">
-            <i class="fas fa-hands-bubbles"></i>
-          </div>
-          <h3 class="card-title">Sanitization Awareness</h3>
-          <p class="card-text">Step-by-step visual handwashing techniques, drinking water treatment methods, and waste segregation strategies.</p>
-          <a href="sanitization.html" class="btn btn-sm btn-outline">Learn More <i class="fas fa-chevron-right"></i></a>
+          <div class="card-icon teal"><i class="fas fa-hands-holding-child"></i></div>
+          <h3 class="card-title">Hand Hygiene</h3>
+          <p class="card-text">Proper 20-second hand scrubbing before meals, after restroom usage, and after touching contaminated surfaces removes 99% of germs.</p>
+          <a href="sanitization.html" class="btn btn-sm btn-outline">Explore Hand Hygiene <i class="fas fa-chevron-right"></i></a>
         </div>
 
-        <!-- Card 2 -->
         <div class="card">
-          <div class="card-icon blue">
-            <i class="fas fa-heart-pulse"></i>
-          </div>
-          <h3 class="card-title">Health Awareness</h3>
-          <p class="card-text">Recognize common hygiene-related illnesses, preventive lifestyle habits, vaccination timelines, and medical guidance.</p>
-          <a href="health-awareness.html" class="btn btn-sm btn-outline">Explore Topics <i class="fas fa-chevron-right"></i></a>
+          <div class="card-icon blue"><i class="fas fa-spray-can-sparkles"></i></div>
+          <h3 class="card-title">Surface Sanitation</h3>
+          <p class="card-text">Regular disinfection of door handles, light switches, counter tops, and mobile devices stops touch-contact viral transmission.</p>
+          <a href="sanitization.html" class="btn btn-sm btn-outline">Explore Surfaces <i class="fas fa-chevron-right"></i></a>
         </div>
 
-        <!-- Card 3 -->
         <div class="card">
-          <div class="card-icon amber">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <h3 class="card-title">Daily Health Tips</h3>
-          <p class="card-text">Filterable tip library, daily rotating health advice, copy-to-clipboard, and favorite tip bookmarking tool.</p>
-          <a href="tips.html" class="btn btn-sm btn-outline">View Tips <i class="fas fa-chevron-right"></i></a>
+          <div class="card-icon green"><i class="fas fa-utensils"></i></div>
+          <h3 class="card-title">Food Hygiene</h3>
+          <p class="card-text">Washing raw produce under clean water, thorough cooking, and separate storage of raw meat prevents severe foodborne illnesses.</p>
+          <a href="sanitization.html" class="btn btn-sm btn-outline">Explore Food Hygiene <i class="fas fa-chevron-right"></i></a>
         </div>
 
-        <!-- Card 4 -->
         <div class="card">
-          <div class="card-icon green">
-            <i class="fas fa-circle-question"></i>
-          </div>
-          <h3 class="card-title">Awareness Quiz</h3>
-          <p class="card-text">Test your understanding with 10 interactive multiple-choice questions, instant visual feedback, and personal high score tracking.</p>
-          <a href="quiz.html" class="btn btn-sm btn-outline">Start Quiz <i class="fas fa-chevron-right"></i></a>
+          <div class="card-icon amber"><i class="fas fa-restroom"></i></div>
+          <h3 class="card-title">Toilet & Sanitation</h3>
+          <p class="card-text">Using clean sanitary toilets, closing toilet lids before flushing, and maintaining sanitary septic tanks stops fecal-oral pathogen cycles.</p>
+          <a href="sanitization.html" class="btn btn-sm btn-outline">Explore Sanitation <i class="fas fa-chevron-right"></i></a>
         </div>
 
-        <!-- Card 5 -->
         <div class="card">
-          <div class="card-icon teal">
-            <i class="fas fa-bullhorn"></i>
-          </div>
-          <h3 class="card-title">Community Campaigns</h3>
-          <p class="card-text">Discover key sanitation awareness dates (World Hand Hygiene Day), local cleanliness drives, and volunteer initiatives.</p>
-          <a href="campaigns.html" class="btn btn-sm btn-outline">View Campaigns <i class="fas fa-chevron-right"></i></a>
+          <div class="card-icon rose"><i class="fas fa-trash-can"></i></div>
+          <h3 class="card-title">Waste Management</h3>
+          <p class="card-text">3-bin household waste segregation (Organic, Dry, Hazardous) prevents fly breeding, groundwater pollution, and foul odors.</p>
+          <a href="sanitization.html" class="btn btn-sm btn-outline">Explore Waste Rules <i class="fas fa-chevron-right"></i></a>
         </div>
 
-        <!-- Card 6 -->
         <div class="card">
-          <div class="card-icon rose">
-            <i class="fas fa-triangle-exclamation"></i>
-          </div>
-          <h3 class="card-title">Emergency Info</h3>
-          <p class="card-text">Quick reference regional medical emergency helplines, first-aid basics, and crucial healthcare disclaimers.</p>
-          <a href="emergency.html" class="btn btn-sm btn-outline">Emergency Contacts <i class="fas fa-chevron-right"></i></a>
+          <div class="card-icon teal"><i class="fas fa-broom"></i></div>
+          <h3 class="card-title">Clean Surroundings</h3>
+          <p class="card-text">Draining stagnant rainwater pools around homes prevents mosquito breeding grounds responsible for Dengue and Malaria outbreaks.</p>
+          <a href="sanitization.html" class="btn btn-sm btn-outline">Explore Surroundings <i class="fas fa-chevron-right"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HIGHLIGHT INFOGRAPHIC PREVIEW -->
+  <!-- HEALTH AWARENESS GRID WITH MODALS -->
   <section class="section">
-    <div class="container hero-grid">
-      <div class="hero-image-wrapper">
-        <img src="assets/images/handwash_guide.jpg" alt="Step by step handwashing visual infographic" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-heart-pulse"></i> Interactive Topics</span>
+        <h2 class="section-title">Health Awareness Topics</h2>
+        <p class="section-description">Click any health topic below to view detailed breakdown on causes, spread mechanisms, warning signs, and prevention.</p>
       </div>
-      <div>
-        <span class="section-tag">Infographic Guide</span>
-        <h2 class="section-title">Proper Handwashing in 6 Simple Steps</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Washing hands with soap and water removes microbes, prevents hospital and community infections, and stops disease outbreaks.</p>
 
-        <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
-          <li style="display:flex; align-items:center; gap:0.75rem; font-size:1rem; font-weight:500;">
-            <i class="fas fa-circle-check" style="color: var(--accent-green);"></i> Wet hands with clean running water & apply adequate soap.
-          </li>
-          <li style="display:flex; align-items:center; gap:0.75rem; font-size:1rem; font-weight:500;">
-            <i class="fas fa-circle-check" style="color: var(--accent-green);"></i> Rub palms together, interlace fingers, scrub backs & under nails.
-          </li>
-          <li style="display:flex; align-items:center; gap:0.75rem; font-size:1rem; font-weight:500;">
-            <i class="fas fa-circle-check" style="color: var(--accent-green);"></i> Rinse thoroughly with running water and dry completely with a clean towel.
-          </li>
-        </ul>
+      <div class="grid-3">
+        <div class="card" data-topic="waterborne" style="cursor: pointer;">
+          <div class="card-icon blue"><i class="fas fa-droplet-slash"></i></div>
+          <h3 class="card-title">Waterborne Diseases</h3>
+          <p class="card-text">Cholera, Typhoid, Hepatitis A, and Dysentery. Learn how water contamination occurs and how to prevent outbreaks.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">Click for Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
 
-        <a href="sanitization.html" class="btn btn-primary">Read Full Sanitization Guide</a>
+        <div class="card" data-topic="respiratory" style="cursor: pointer;">
+          <div class="card-icon teal"><i class="fas fa-head-side-mask"></i></div>
+          <h3 class="card-title">Respiratory Hygiene</h3>
+          <p class="card-text">Influenza, viral colds, and airborne pathogens. Protocols for mask usage, cough etiquette, and room ventilation.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">Click for Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="card" data-topic="food" style="cursor: pointer;">
+          <div class="card-icon green"><i class="fas fa-apple-whole"></i></div>
+          <h3 class="card-title">Food Safety & Hygiene</h3>
+          <p class="card-text">Preventing cross-contamination, safe cooking temperatures, and washing fresh produce to avoid gastroenteritis.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">Click for Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="card" data-topic="personal" style="cursor: pointer;">
+          <div class="card-icon amber"><i class="fas fa-user-shield"></i></div>
+          <h3 class="card-title">Personal Hygiene</h3>
+          <p class="card-text">Daily bathing, dental care, skin protection, and sanitary grooming habits that protect immune health.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">Click for Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="card" data-topic="environmental" style="cursor: pointer;">
+          <div class="card-icon rose"><i class="fas fa-recycle"></i></div>
+          <h3 class="card-title">Environmental Cleanliness</h3>
+          <p class="card-text">Solid waste disposal, drainage maintenance, and keeping community spaces free from bacterial breeding spots.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">Click for Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
+
+        <div class="card" data-topic="vector" style="cursor: pointer;">
+          <div class="card-icon blue"><i class="fas fa-mosquito"></i></div>
+          <h3 class="card-title">Vector-Borne Control</h3>
+          <p class="card-text">Dengue, Malaria, and Chikungunya prevention. Eliminating standing water where mosquitoes breed.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">Click for Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- AWARENESS IMPACT DASHBOARD -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-chart-line"></i> Educational Metrics</span>
+        <h2 class="section-title">Awareness Impact Dashboard</h2>
+        <p class="section-description">Project scope metrics showcasing the learning modules available on this public health platform.</p>
+      </div>
+
+      <div class="counter-grid">
+        <div class="counter-card">
+          <div class="counter-num" data-count="15">0+</div>
+          <div class="counter-label">Hygiene Topics</div>
+        </div>
+
+        <div class="counter-card">
+          <div class="counter-num" data-count="50">0+</div>
+          <div class="counter-label">Awareness Tips</div>
+        </div>
+
+        <div class="counter-card">
+          <div class="counter-num" data-count="12">0+</div>
+          <div class="counter-label">Quiz Questions</div>
+        </div>
+
+        <div class="counter-card">
+          <div class="counter-num" data-count="20">0+</div>
+          <div class="counter-label">Prevention Topics</div>
+        </div>
+
+        <div class="counter-card">
+          <div class="counter-num" data-count="10">0+</div>
+          <div class="counter-label">Campaign Ideas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPANDED HEALTH TOPIC MODAL DIALOG -->
+  <div id="topicModalOverlay" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Health Topic Details</h3>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section-box">
+          <div class="modal-section-title"><i class="fas fa-virus"></i> Primary Cause</div>
+          <p id="modalCauseText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <div class="modal-section-box" style="border-left-color: var(--accent-blue);">
+          <div class="modal-section-title" style="color: var(--accent-blue);"><i class="fas fa-route"></i> How It Spreads</div>
+          <p id="modalSpreadText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <div class="modal-section-box" style="border-left-color: var(--accent-amber);">
+          <div class="modal-section-title" style="color: var(--accent-amber);"><i class="fas fa-triangle-exclamation"></i> Warning Signs</div>
+          <p id="modalWarningText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <div class="modal-section-box" style="border-left-color: var(--accent-green);">
+          <div class="modal-section-title" style="color: var(--accent-green);"><i class="fas fa-shield-check"></i> Prevention Strategy</div>
+          <p id="modalPreventionText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <div class="modal-section-box" style="border-left-color: var(--accent-rose);">
+          <div class="modal-section-title" style="color: var(--accent-rose);"><i class="fas fa-user-doctor"></i> When to Seek Professional Help</div>
+          <p id="modalMedicalText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 0.5rem;">
+          <i class="fas fa-info-circle"></i> Disclaimer: Content provided is for general educational awareness only and does not replace medical diagnosis.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -214,14 +433,15 @@
             <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
             <span>HygienePulse</span>
           </a>
-          <p>An educational web portal promoting public sanitization, personal hygiene, and health awareness. CSE Mini-Project.</p>
+          <p>An educational public-health portal promoting sanitization, safe drinking water, personal hygiene, and disease prevention. CSE Mini-Project.</p>
         </div>
 
         <div>
-          <h4 class="footer-title">Quick Links</h4>
+          <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="sanitization.html">Sanitization Awareness</a></li>
+            <li><a href="#safe-water">Safe Drinking Water</a></li>
             <li><a href="health-awareness.html">Health Awareness</a></li>
             <li><a href="tips.html">Daily Health Tips</a></li>
           </ul>
@@ -231,31 +451,34 @@
           <h4 class="footer-title">Interactive Tools</h4>
           <ul class="footer-links">
             <li><a href="quiz.html">Awareness Quiz</a></li>
-            <li><a href="campaigns.html">Campaign Calendar</a></li>
+            <li><a href="campaigns.html">Awareness Campaigns</a></li>
             <li><a href="emergency.html">Emergency Contacts</a></li>
-            <li><a href="about.html">About & Contact</a></li>
+            <li><a href="about.html">About Project</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-title">Medical Disclaimer</h4>
-          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">This site is for educational purposes only and does not provide medical diagnosis or substitute professional clinical advice.</p>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
+            This website is intended for educational and awareness purposes only and does not replace professional medical advice, diagnosis, or clinical treatment.
+          </p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project. Built with HTML, CSS, JavaScript.</p>
+        <p>&copy; 2026 HygienePulse | Sanitization & Health Awareness Portal | CSE Project Presentation. Built with HTML5, CSS3, JavaScript.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Back to Top Button -->
   <button class="back-to-top" id="scrollTopBtn" title="Scroll to Top">
     <i class="fas fa-arrow-up"></i>
   </button>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/water-checker.js"></script>
+  <script src="js/handwash.js"></script>
   <script src="js/tips.js"></script>
 </body>
 </html>

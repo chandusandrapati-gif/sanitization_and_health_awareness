@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
+  <!-- STICKY NAVIGATION BAR -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
@@ -25,15 +25,19 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="index.html#safe-water" class="nav-link">Safe Water</a></li>
         <li><a href="health-awareness.html" class="nav-link active">Health Awareness</a></li>
         <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
         <li><a href="quiz.html" class="nav-link">Quiz</a></li>
         <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
-        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency Info</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
       </ul>
 
       <div class="nav-actions">
+        <a href="quiz.html" class="btn btn-sm btn-primary" style="display: inline-flex;">
+          <i class="fas fa-graduation-cap"></i> Take the Awareness Quiz
+        </a>
         <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
@@ -55,103 +59,146 @@
     </div>
   </header>
 
-  <!-- COMMON HYGIENE ILLNESSES -->
-  <section class="section">
+  <!-- DISEASE PREVENTION BY CATEGORY -->
+  <section id="prevention" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Disease Awareness</span>
-        <h2 class="section-title">Common Hygiene-Related Illnesses</h2>
-        <p class="section-description">Knowledge is your primary shield. Learn how these diseases spread and how simple sanitation halts transmission.</p>
+        <span class="section-tag"><i class="fas fa-shield-cat"></i> Targeted Prevention</span>
+        <h2 class="section-title">Disease Prevention Categories</h2>
+        <p class="section-description">Select a transmission category to view targeted hygiene habits that reduce disease exposure risks.</p>
       </div>
 
-      <div class="grid-3">
-        <!-- Disease 1 -->
-        <div class="card">
-          <div class="card-icon rose">
-            <i class="fas fa-bacteria"></i>
-          </div>
-          <h3 class="card-title">Diarrheal Diseases & Cholera</h3>
-          <p class="card-text">Caused by consuming food or water contaminated with bacterial pathogens like <i>Vibrio cholerae</i> or <i>E. coli</i>.</p>
-          <div style="background: var(--bg-primary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
-            <strong style="color:var(--text-primary);"><i class="fas fa-shield-halved" style="color:var(--accent-teal);"></i> Prevention:</strong> Drink boiled/filtered water, wash hands thoroughly before meals, use clean sanitation facilities.
-          </div>
-        </div>
+      <!-- Tab Buttons -->
+      <div class="tab-navigation">
+        <button class="tab-btn active" data-tab="water"><i class="fas fa-droplet"></i> Water</button>
+        <button class="tab-btn" data-tab="food"><i class="fas fa-utensils"></i> Food</button>
+        <button class="tab-btn" data-tab="hands"><i class="fas fa-hands-bubbles"></i> Hands</button>
+        <button class="tab-btn" data-tab="air"><i class="fas fa-wind"></i> Air</button>
+        <button class="tab-btn" data-tab="environment"><i class="fas fa-tree"></i> Environment</button>
+      </div>
 
-        <!-- Disease 2 -->
+      <!-- Tab Panels -->
+      <div id="tab-water" class="tab-panel grid-3" style="display: grid;">
         <div class="card">
-          <div class="card-icon amber">
-            <i class="fas fa-mosquito"></i>
-          </div>
-          <h3 class="card-title">Dengue & Malaria</h3>
-          <p class="card-text">Vector-borne viral/parasitic infections transmitted through mosquito bites in areas with stagnant standing water.</p>
-          <div style="background: var(--bg-primary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
-            <strong style="color:var(--text-primary);"><i class="fas fa-shield-halved" style="color:var(--accent-teal);"></i> Prevention:</strong> Drain standing water weekly, use mosquito nets, wear long sleeves, apply repellent.
-          </div>
+          <div class="card-icon blue"><i class="fas fa-fire"></i></div>
+          <h3 class="card-title">1-Minute Boiling</h3>
+          <p class="card-text">Boiling water continuously for 1 minute neutralizes bacterial and viral pathogens responsible for Cholera and Typhoid.</p>
         </div>
-
-        <!-- Disease 3 -->
         <div class="card">
-          <div class="card-icon blue">
-            <i class="fas fa-head-side-cough"></i>
-          </div>
-          <h3 class="card-title">Influenza & Respiratory Infections</h3>
-          <p class="card-text">Airborne viral contagions that spread rapidly through respiratory droplets from coughs, sneezes, or unwashed hands.</p>
-          <div style="background: var(--bg-primary); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
-            <strong style="color:var(--text-primary);"><i class="fas fa-shield-halved" style="color:var(--accent-teal);"></i> Prevention:</strong> Wear masks in crowded spaces, practice elbow coughing, sanitize high-touch surfaces.
-          </div>
+          <div class="card-icon teal"><i class="fas fa-glass-water"></i></div>
+          <h3 class="card-title">Covered Dispenser Storage</h3>
+          <p class="card-text">Store drinking water in vessels fitted with taps to eliminate contact with unwashed hands and cups.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon green"><i class="fas fa-filter"></i></div>
+          <h3 class="card-title">Filter Cleaning Routine</h3>
+          <p class="card-text">Scrub water filter candles monthly to maintain effective bacterial and sediment trapping efficiency.</p>
+        </div>
+      </div>
+
+      <div id="tab-food" class="tab-panel grid-3" style="display: none;">
+        <div class="card">
+          <div class="card-icon green"><i class="fas fa-apple-whole"></i></div>
+          <h3 class="card-title">Raw Produce Washing</h3>
+          <p class="card-text">Wash fresh vegetables and fruits under clean running water before peeling or consuming raw.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon rose"><i class="fas fa-scissors"></i></div>
+          <h3 class="card-title">Separate Cutting Boards</h3>
+          <p class="card-text">Use separate cutting boards for raw meat and ready-to-eat produce to stop cross-contamination.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon amber"><i class="fas fa-temperature-arrow-up"></i></div>
+          <h3 class="card-title">Thorough Cooking</h3>
+          <p class="card-text">Ensure food is cooked thoroughly and served piping hot to destroy microbial toxins.</p>
+        </div>
+      </div>
+
+      <div id="tab-hands" class="tab-panel grid-3" style="display: none;">
+        <div class="card">
+          <div class="card-icon teal"><i class="fas fa-clock"></i></div>
+          <h3 class="card-title">20-Second Rule</h3>
+          <p class="card-text">Lather and scrub all hand surfaces, thumb bases, and nail beds with soap for at least 20 seconds.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon blue"><i class="fas fa-hand-holding-medical"></i></div>
+          <h3 class="card-title">Critical Moments</h3>
+          <p class="card-text">Wash hands before eating, before preparing food, after using the toilet, and after handling trash.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon green"><i class="fas fa-bottle-droplet"></i></div>
+          <h3 class="card-title">Sanitizer Backup</h3>
+          <p class="card-text">Use 60%+ alcohol hand sanitizer when clean running water and soap are unavailable.</p>
+        </div>
+      </div>
+
+      <div id="tab-air" class="tab-panel grid-3" style="display: none;">
+        <div class="card">
+          <div class="card-icon blue"><i class="fas fa-head-side-mask"></i></div>
+          <h3 class="card-title">Crowd Masking</h3>
+          <p class="card-text">Wear well-fitting masks in poorly ventilated or crowded public transport to filter viral aerosols.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon teal"><i class="fas fa-box-tissue"></i></div>
+          <h3 class="card-title">Elbow Sneeze Etiquette</h3>
+          <p class="card-text">Cough or sneeze into a tissue or flexed elbow to avoid spreading droplets onto hands and surfaces.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon amber"><i class="fas fa-fan"></i></div>
+          <h3 class="card-title">Indoor Airflow</h3>
+          <p class="card-text">Keep windows open in living quarters to dilute and flush out floating indoor airborne pathogens.</p>
+        </div>
+      </div>
+
+      <div id="tab-environment" class="tab-panel grid-3" style="display: none;">
+        <div class="card">
+          <div class="card-icon rose"><i class="fas fa-mosquito"></i></div>
+          <h3 class="card-title">Drain Standing Water</h3>
+          <p class="card-text">Empty flower pots, tires, and open buckets weekly to stop mosquito larvae from breeding.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon green"><i class="fas fa-recycle"></i></div>
+          <h3 class="card-title">Sealed Garbage Bins</h3>
+          <p class="card-text">Keep organic waste in tightly closed bins to prevent flies and rodents from carrying pathogens into kitchens.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon teal"><i class="fas fa-broom"></i></div>
+          <h3 class="card-title">Community Sweeping</h3>
+          <p class="card-text">Participate in neighborhood clean-up drives to eliminate open waste piles and foul drainage blockage.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HEALTHY LIFESTYLE PILLARS -->
+  <!-- COMMON HYGIENE ILLNESSES GRID WITH MODALS -->
   <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Wellness Principles</span>
-        <h2 class="section-title">4 Pillars of Everyday Immunity</h2>
-        <p class="section-description">A strong natural immune system works hand-in-hand with external hygiene practices.</p>
+        <span class="section-tag">Disease Awareness</span>
+        <h2 class="section-title">Common Hygiene-Related Illnesses</h2>
+        <p class="section-description">Click any disease card below to open an expanded information panel (Cause → Spread → Warning Signs → Prevention → Medical Help).</p>
       </div>
 
-      <div class="grid-2">
-        <div class="card" style="display:flex; flex-direction:row; gap:1.25rem; align-items:center;">
-          <div class="card-icon teal" style="margin:0; flex-shrink:0;">
-            <i class="fas fa-glass-water"></i>
-          </div>
-          <div>
-            <h4 style="font-weight:700; font-size:1.1rem;">1. Optimal Hydration</h4>
-            <p style="font-size:0.9rem; color:var(--text-secondary);">Drinking 2 to 3 liters of clean water daily flushes toxins, maintains mucosal barriers, and boosts energy.</p>
-          </div>
+      <div class="grid-3">
+        <div class="card" data-topic="waterborne" style="cursor: pointer;">
+          <div class="card-icon rose"><i class="fas fa-bacteria"></i></div>
+          <h3 class="card-title">Diarrheal Diseases & Cholera</h3>
+          <p class="card-text">Caused by <em>Vibrio cholerae</em> or <em>E. coli</em> in contaminated drinking water.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">View Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
         </div>
 
-        <div class="card" style="display:flex; flex-direction:row; gap:1.25rem; align-items:center;">
-          <div class="card-icon green" style="margin:0; flex-shrink:0;">
-            <i class="fas fa-carrot"></i>
-          </div>
-          <div>
-            <h4 style="font-weight:700; font-size:1.1rem;">2. Nutrient-Dense Diet</h4>
-            <p style="font-size:0.9rem; color:var(--text-secondary);">Consume fresh fruits, leafy vegetables, nuts, and proteins rich in Vitamin C, Zinc, and antioxidants.</p>
-          </div>
+        <div class="card" data-topic="vector" style="cursor: pointer;">
+          <div class="card-icon amber"><i class="fas fa-mosquito"></i></div>
+          <h3 class="card-title">Dengue & Malaria</h3>
+          <p class="card-text">Vector-borne infections spread by mosquitoes breeding in stagnant water.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">View Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
         </div>
 
-        <div class="card" style="display:flex; flex-direction:row; gap:1.25rem; align-items:center;">
-          <div class="card-icon blue" style="margin:0; flex-shrink:0;">
-            <i class="fas fa-bed"></i>
-          </div>
-          <div>
-            <h4 style="font-weight:700; font-size:1.1rem;">3. Restorative Sleep</h4>
-            <p style="font-size:0.9rem; color:var(--text-secondary);">7 to 8 hours of uninterrupted night sleep enables cellular repair and antibody synthesis.</p>
-          </div>
-        </div>
-
-        <div class="card" style="display:flex; flex-direction:row; gap:1.25rem; align-items:center;">
-          <div class="card-icon amber" style="margin:0; flex-shrink:0;">
-            <i class="fas fa-person-running"></i>
-          </div>
-          <div>
-            <h4 style="font-weight:700; font-size:1.1rem;">4. Daily Physical Movement</h4>
-            <p style="font-size:0.9rem; color:var(--text-secondary);">30 minutes of brisk walking, cycling, or yoga improves blood circulation and stress regulation.</p>
-          </div>
+        <div class="card" data-topic="respiratory" style="cursor: pointer;">
+          <div class="card-icon blue"><i class="fas fa-head-side-cough"></i></div>
+          <h3 class="card-title">Influenza & Respiratory Infections</h3>
+          <p class="card-text">Airborne contagions spread through airborne droplets and contaminated hands.</p>
+          <span class="btn btn-sm btn-outline" style="align-self: flex-start;">View Breakdown <i class="fas fa-arrow-up-right-from-square"></i></span>
         </div>
       </div>
     </div>
@@ -179,6 +226,47 @@
       </div>
     </div>
   </section>
+
+  <!-- EXPANDED HEALTH TOPIC MODAL DIALOG -->
+  <div id="topicModalOverlay" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Health Topic Details</h3>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section-box">
+          <div class="modal-section-title"><i class="fas fa-virus"></i> Primary Cause</div>
+          <p id="modalCauseText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <div class="modal-section-box" style="border-left-color: var(--accent-blue);">
+          <div class="modal-section-title" style="color: var(--accent-blue);"><i class="fas fa-route"></i> How It Spreads</div>
+          <p id="modalSpreadText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <div class="modal-section-box" style="border-left-color: var(--accent-amber);">
+          <div class="modal-section-title" style="color: var(--accent-amber);"><i class="fas fa-triangle-exclamation"></i> Warning Signs</div>
+          <p id="modalWarningText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <div class="modal-section-box" style="border-left-color: var(--accent-green);">
+          <div class="modal-section-title" style="color: var(--accent-green);"><i class="fas fa-shield-check"></i> Prevention Strategy</div>
+          <p id="modalPreventionText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <div class="modal-section-box" style="border-left-color: var(--accent-rose);">
+          <div class="modal-section-title" style="color: var(--accent-rose);"><i class="fas fa-user-doctor"></i> When to Seek Professional Help</div>
+          <p id="modalMedicalText" style="color: var(--text-secondary); margin: 0;"></p>
+        </div>
+
+        <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 0.5rem;">
+          <i class="fas fa-info-circle"></i> Educational awareness tool only — does not constitute medical diagnosis.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -219,7 +307,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project.</p>
+        <p>&copy; 2026 HygienePulse | Sanitization & Health Awareness Portal | CSE Project Presentation.</p>
       </div>
     </div>
   </footer>

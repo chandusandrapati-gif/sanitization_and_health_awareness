@@ -121,10 +121,47 @@ function renderDailyTip() {
           <button class="btn btn-sm btn-outline" onclick="copyTipText('${escape(tip.title)}', '${escape(tip.content)}')">
             <i class="fas fa-copy"></i> Copy
           </button>
+          <button class="btn btn-sm btn-secondary" onclick="renderRandomTip()">
+            <i class="fas fa-shuffle"></i> New Tip
+          </button>
         </div>
       </div>
     </div>
   `;
+}
+
+function renderRandomTip() {
+  const dailyTipCard = document.getElementById('dailyTipCard');
+  if (!dailyTipCard) return;
+
+  const randomIndex = Math.floor(Math.random() * HEALTH_TIPS.length);
+  const tip = HEALTH_TIPS[randomIndex];
+
+  dailyTipCard.innerHTML = `
+    <div class="tip-content-box">
+      <i class="fas ${tip.icon} tip-bulb-icon"></i>
+      <div>
+        <div class="tip-header">
+          <span class="badge badge-teal">${tip.badge}</span>
+          <span class="badge badge-amber"><i class="fas fa-sparkles"></i> Rotating Health Tip</span>
+        </div>
+        <h3 class="tip-body">${tip.title}</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">${tip.content}</p>
+        <div class="tip-footer-actions">
+          <button class="btn btn-sm btn-primary" onclick="saveFavoriteTip(${tip.id})">
+            <i class="${isTipFavorite(tip.id) ? 'fas' : 'far'} fa-heart"></i> ${isTipFavorite(tip.id) ? 'Saved' : 'Save Tip'}
+          </button>
+          <button class="btn btn-sm btn-outline" onclick="copyTipText('${escape(tip.title)}', '${escape(tip.content)}')">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+          <button class="btn btn-sm btn-secondary" onclick="renderRandomTip()">
+            <i class="fas fa-shuffle"></i> New Tip
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+  showToast('Loaded new health tip!', 'info');
 }
 
 /* 2. Render Full Tip Cards */

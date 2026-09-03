@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
+  <!-- STICKY NAVIGATION BAR -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
@@ -25,15 +25,19 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="index.html#safe-water" class="nav-link">Safe Water</a></li>
         <li><a href="health-awareness.html" class="nav-link">Health Awareness</a></li>
         <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
         <li><a href="quiz.html" class="nav-link">Quiz</a></li>
         <li><a href="campaigns.html" class="nav-link active">Campaigns</a></li>
-        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency Info</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
       </ul>
 
       <div class="nav-actions">
+        <a href="quiz.html" class="btn btn-sm btn-primary" style="display: inline-flex;">
+          <i class="fas fa-graduation-cap"></i> Take the Awareness Quiz
+        </a>
         <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
@@ -60,8 +64,61 @@
     </div>
   </header>
 
-  <!-- IMPORTANT AWARENESS DATES -->
+  <!-- FEATURED CAMPAIGN CARDS -->
   <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Campaigns</span>
+        <h2 class="section-title">Community Health & Hygiene Initiatives</h2>
+        <p class="section-description">Goal-driven public awareness campaigns designed for schools, colleges, and local communities.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="border-left: 5px solid var(--accent-teal);">
+          <div class="card-icon teal"><i class="fas fa-hands-bubbles"></i></div>
+          <span class="badge badge-teal" style="align-self: flex-start; margin-bottom: 0.5rem;">Active Campaign</span>
+          <h3 class="card-title">Clean Hands Campaign</h3>
+          <p class="card-text">Promoting proper 20-second handwashing with soap across schools, public eateries, and residential complexes to reduce gastrointestinal infection rates.</p>
+          <div style="background: var(--bg-secondary); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+            <strong>Goal:</strong> Educate 5,000+ students on the 9 handwashing steps and distribute soap bars.
+          </div>
+        </div>
+
+        <div class="card" style="border-left: 5px solid var(--accent-blue);">
+          <div class="card-icon blue"><i class="fas fa-glass-water"></i></div>
+          <span class="badge badge-blue" style="align-self: flex-start; margin-bottom: 0.5rem;">Active Campaign</span>
+          <h3 class="card-title">Safe Water Campaign</h3>
+          <p class="card-text">Teaching households the 1-minute boiling rule, proper vessel covered storage, and safe dispenser taps to eradicate waterborne contamination.</p>
+          <div style="background: var(--bg-secondary); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+            <strong>Goal:</strong> Distribute water safety guidelines and covered pitcher storage tips across rural hubs.
+          </div>
+        </div>
+
+        <div class="card" style="border-left: 5px solid var(--accent-green);">
+          <div class="card-icon green"><i class="fas fa-school"></i></div>
+          <span class="badge badge-green" style="align-self: flex-start; margin-bottom: 0.5rem;">Active Campaign</span>
+          <h3 class="card-title">Clean Campus Campaign</h3>
+          <p class="card-text">Implementing 3-bin waste segregation (Green, Blue, Red) across college campuses, cafeterias, and student hostels.</p>
+          <div style="background: var(--bg-secondary); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+            <strong>Goal:</strong> 100% waste segregation compliance and zero open littering across college grounds.
+          </div>
+        </div>
+
+        <div class="card" style="border-left: 5px solid var(--accent-amber);">
+          <div class="card-icon amber"><i class="fas fa-people-roof"></i></div>
+          <span class="badge badge-amber" style="align-self: flex-start; margin-bottom: 0.5rem;">Active Campaign</span>
+          <h3 class="card-title">Healthy Community Campaign</h3>
+          <p class="card-text">Eliminating stagnant rainwater pools around neighborhood streets to destroy mosquito breeding spots for Dengue & Malaria prevention.</p>
+          <div style="background: var(--bg-secondary); padding: 0.85rem; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+            <strong>Goal:</strong> Weekly standing water drainage drives and fogging awareness in vulnerable residential blocks.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPORTANT AWARENESS DATES -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Global Observances</span>
@@ -70,71 +127,32 @@
       </div>
 
       <div class="grid-3">
-        <!-- Date 1 -->
         <div class="card">
-          <div class="card-icon teal">
-            <i class="fas fa-calendar-day"></i>
-          </div>
+          <div class="card-icon teal"><i class="fas fa-calendar-day"></i></div>
           <span class="badge badge-teal" style="margin-bottom:0.5rem;">March 22</span>
           <h3 class="card-title">World Water Day</h3>
-          <p class="card-text">Focuses on advocate sustainable management of freshwater resources and universal safe drinking water access.</p>
+          <p class="card-text">Focuses on advocating sustainable management of freshwater resources and universal safe drinking water access.</p>
         </div>
 
-        <!-- Date 2 -->
         <div class="card">
-          <div class="card-icon blue">
-            <i class="fas fa-calendar-day"></i>
-          </div>
+          <div class="card-icon blue"><i class="fas fa-calendar-day"></i></div>
           <span class="badge badge-blue" style="margin-bottom:0.5rem;">May 5</span>
           <h3 class="card-title">World Hand Hygiene Day</h3>
           <p class="card-text">WHO initiative reinforcing hand hygiene in healthcare settings and community environments to save lives.</p>
         </div>
 
-        <!-- Date 3 -->
         <div class="card">
-          <div class="card-icon green">
-            <i class="fas fa-calendar-day"></i>
-          </div>
+          <div class="card-icon green"><i class="fas fa-calendar-day"></i></div>
           <span class="badge badge-green" style="margin-bottom:0.5rem;">October 15</span>
           <h3 class="card-title">Global Handwashing Day</h3>
           <p class="card-text">Dedicated to advocating handwashing with soap as an easy, effective, and affordable disease prevention habit.</p>
-        </div>
-
-        <!-- Date 4 -->
-        <div class="card">
-          <div class="card-icon amber">
-            <i class="fas fa-calendar-day"></i>
-          </div>
-          <span class="badge badge-amber" style="margin-bottom:0.5rem;">November 19</span>
-          <h3 class="card-title">World Toilet Day</h3>
-          <p class="card-text">Tackling the global sanitation crisis and achieving UN Sustainable Development Goal 6: Sanitation for all by 2030.</p>
-        </div>
-
-        <!-- Date 5 -->
-        <div class="card">
-          <div class="card-icon rose">
-            <i class="fas fa-calendar-day"></i>
-          </div>
-          <span class="badge badge-rose" style="margin-bottom:0.5rem;">April 7</span>
-          <h3 class="card-title">World Health Day</h3>
-          <p class="card-text">Annual global awareness day highlighting specific priority healthcare concerns impacting communities worldwide.</p>
-        </div>
-
-        <!-- Date 6 -->
-        <div class="card">
-          <div class="card-icon teal">
-            <i class="fas fa-calendar-day"></i>
-          </div>
-          <span class="badge badge-teal" style="margin-bottom:0.5rem;">Monthly 1st Sat</span>
-          <h3 class="card-title">Neighborhood Clean Drive</h3>
-          <p class="card-text">Local community waste collection, street cleaning, and drain clearing drives organized by student volunteers.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- VOLUNTEER REGISTRATION FORM -->
-  <section class="section" id="volunteerFormSection" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+  <section class="section" id="volunteerFormSection">
     <div class="container" style="max-width:700px;">
       <div class="section-header">
         <span class="section-tag">Get Involved</span>
@@ -212,7 +230,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project.</p>
+        <p>&copy; 2026 HygienePulse | Sanitization & Health Awareness Portal | CSE Project Presentation.</p>
       </div>
     </div>
   </footer>

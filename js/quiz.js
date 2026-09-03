@@ -1,6 +1,6 @@
 /* ==========================================================================
-   SANITIZATION & HEALTH AWARENESS PORTAL - QUIZ JAVASCRIPT
-   Handles Interactive MCQ Quiz, Instant Feedback, Scoring, LocalStorage Highscore
+   SANITIZATION & HEALTH AWARENESS PORTAL - INTERACTIVE QUIZ ENGINE
+   12 Comprehensive MCQs, instant feedback, scoring, awareness levels, local best
    ========================================================================== */
 
 const QUIZ_QUESTIONS = [
@@ -13,10 +13,10 @@ const QUIZ_QUESTIONS = [
       "60 seconds"
     ],
     correct: 2,
-    explanation: "Health organizations recommend scrubbing all hand surfaces with soap for at least 20 seconds to effectively dissolve germ cell membranes."
+    explanation: "Health organizations recommend scrubbing all hand surfaces with soap for at least 20 seconds to effectively break down germ cell structures."
   },
   {
-    question: "Which of the following is considered the primary cause of waterborne illnesses like Cholera and Typhoid?",
+    question: "Which of the following is considered a primary cause of waterborne illnesses like Cholera and Typhoid?",
     options: [
       "Air pollution",
       "Consuming drinking water contaminated with sewage or bacteria",
@@ -24,10 +24,21 @@ const QUIZ_QUESTIONS = [
       "Lack of physical exercise"
     ],
     correct: 1,
-    explanation: "Contaminated water sources carrying pathogenic microbes cause waterborne infectious diseases. Boiling or filtering water prevents infection."
+    explanation: "Contaminated water sources carrying pathogenic microbes cause waterborne infectious diseases. Boiling or proper purification prevents infection."
   },
   {
-    question: "In standard 3-bin household waste segregation, which bin should organic food scraps go into?",
+    question: "How long should water be kept at a continuous rolling boil to eliminate pathogenic microbes?",
+    options: [
+      "5 seconds",
+      "At least 1 full minute (3 minutes at high altitudes)",
+      "10 minutes only after cooling",
+      "Boiling is ineffective against bacteria"
+    ],
+    correct: 1,
+    explanation: "A continuous rolling boil for at least 1 minute neutralizes bacteria, viruses, and protozoa, rendering drinking water biologically safe."
+  },
+  {
+    question: "In standard household waste segregation, which bin should organic food scraps go into?",
     options: [
       "Wet / Organic Trash Bin (Green)",
       "Dry / Plastic Recyclables Bin (Blue)",
@@ -35,14 +46,14 @@ const QUIZ_QUESTIONS = [
       "General Glass Bin"
     ],
     correct: 0,
-    explanation: "Organic waste like leftover food and vegetable peels goes into the Green (Wet) bin for composting."
+    explanation: "Organic waste like leftover food and peels goes into the Green (Wet) bin for composting and sanitary waste processing."
   },
   {
-    question: "Why should standing water around households be regularly drained or treated?",
+    question: "Why should standing water around households be regularly drained or covered?",
     options: [
       "It absorbs clean oxygen from the air",
       "It provides breeding grounds for disease-transmitting mosquitoes like Aedes and Anopheles",
-      "It causes soil erosion indoors",
+      "It causes indoor soil erosion",
       "It attracts harmful UV radiation"
     ],
     correct: 1,
@@ -52,23 +63,12 @@ const QUIZ_QUESTIONS = [
     question: "What is the proper etiquette when coughing or sneezing in public?",
     options: [
       "Covering your mouth with open palms",
-      "Coughing into the air towards open space",
-      "Covering your mouth/nose with a tissue or flexed elbow",
+      "Coughing directly into open space",
+      "Covering your mouth and nose with a tissue or flexed elbow",
       "Holding your breath"
     ],
     correct: 2,
-    explanation: "Coughing into your elbow or tissue prevents droplets from contaminating your hands and spreading airborne pathogens."
-  },
-  {
-    question: "At what temperature should water reach during boiling to ensure harmful bacteria and parasites are destroyed?",
-    options: [
-      "Warm lukewarm temperature",
-      "Rolling boil (100°C / 212°F) for at least 1 full minute",
-      "50°C for 10 seconds",
-      "Freezing point"
-    ],
-    correct: 1,
-    explanation: "A continuous rolling boil for at least 1 minute neutralizes virtually all bacteria, viruses, and protozoa."
+    explanation: "Coughing into your elbow or tissue prevents respiratory droplets from contaminating your hands and spreading airborne pathogens."
   },
   {
     question: "What is cross-contamination in food hygiene?",
@@ -82,7 +82,18 @@ const QUIZ_QUESTIONS = [
     explanation: "Cross-contamination occurs when pathogens from raw meat, unwashed boards, or dirty hands spread to ready-to-eat meals."
   },
   {
-    question: "Which habit contributes most effectively to personal respiratory hygiene during flu season?",
+    question: "What makes household drinking water storage unsafe?",
+    options: [
+      "Storing water in clean, covered glass jars",
+      "Storing water in open, unwashed containers where hands or dirty scoops touch the water",
+      "Using narrow-necked containers with taps",
+      "Boiling water before pouring into a clean pitcher"
+    ],
+    correct: 1,
+    explanation: "Open containers allow dust, insects, and contaminated hands to re-introduce pathogens into safe water."
+  },
+  {
+    question: "Which habit contributes most effectively to respiratory hygiene during viral season?",
     options: [
       "Wearing a well-fitting mask in crowded indoor spaces",
       "Drinking cold sugary beverages",
@@ -96,7 +107,7 @@ const QUIZ_QUESTIONS = [
     question: "When should you seek immediate professional medical attention rather than self-treating at home?",
     options: [
       "Mild tiredness after a walk",
-      "High persistent fever with severe breathing difficulty or dehydration",
+      "High persistent fever with severe breathing difficulty, chest pain, or dehydration",
       "A minor paper cut",
       "Feeling sleepy at night"
     ],
@@ -104,21 +115,31 @@ const QUIZ_QUESTIONS = [
     explanation: "High fever accompanied by difficulty breathing, chest pain, or severe dehydration requires urgent medical diagnosis."
   },
   {
-    question: "What is the role of routine childhood vaccinations in public health awareness?",
+    question: "What is the primary objective of community hand hygiene campaigns?",
     options: [
-      "They treat active viral infections immediately",
-      "They train the immune system to build herd immunity against deadly preventable diseases like Polio and Measles",
-      "They replace the need for handwashing",
-      "They cure bacterial wound infections"
+      "To increase soap sales",
+      "To reduce infectious disease transmission and foster lifelong sanitary habits",
+      "To eliminate the need for clean water",
+      "To replace medical treatments"
     ],
     correct: 1,
-    explanation: "Vaccines stimulate antibody production, building individual and community protection against dangerous infectious diseases."
+    explanation: "Hand hygiene campaigns educate populations, significantly reducing gastrointestinal and respiratory infection rates."
+  },
+  {
+    question: "What is the main advantage of UV (Ultraviolet) water purifiers?",
+    options: [
+      "They add healthy sugars to water",
+      "They destroy bacterial & viral DNA without adding chemicals or altering taste",
+      "They remove plastic bottles from oceans",
+      "They freeze water instantly"
+    ],
+    correct: 1,
+    explanation: "UV light inactivates waterborne pathogens by destroying their nucleic acids, rendering them incapable of reproduction."
   }
 ];
 
 let currentQuestionIndex = 0;
 let score = 0;
-let userAnswers = [];
 let answerSelected = false;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -131,7 +152,6 @@ function initQuiz() {
 
   currentQuestionIndex = 0;
   score = 0;
-  userAnswers = [];
   answerSelected = false;
 
   renderQuestion();
@@ -143,7 +163,7 @@ function renderQuestion() {
 
   const total = QUIZ_QUESTIONS.length;
   const q = QUIZ_QUESTIONS[currentQuestionIndex];
-  const progressPercent = ((currentQuestionIndex) / total) * 100;
+  const progressPercent = Math.round(((currentQuestionIndex) / total) * 100);
 
   quizBox.innerHTML = `
     <div class="quiz-progress-bar">
@@ -152,7 +172,7 @@ function renderQuestion() {
     
     <div class="quiz-header">
       <span class="badge badge-teal">Question ${currentQuestionIndex + 1} of ${total}</span>
-      <span class="badge badge-amber"><i class="fas fa-trophy"></i> Current Score: ${score}/${currentQuestionIndex}</span>
+      <span class="badge badge-amber"><i class="fas fa-trophy"></i> Score: ${score}/${currentQuestionIndex}</span>
     </div>
 
     <h3 class="quiz-question">${q.question}</h3>
@@ -167,12 +187,12 @@ function renderQuestion() {
     </div>
 
     <div class="explanation-box" id="explanationBox">
-      <h4><i class="fas fa-lightbulb"></i> Health Insight:</h4>
-      <p id="explanationText">${q.explanation}</p>
+      <h4 style="color: var(--accent-blue); margin-bottom: 0.35rem;"><i class="fas fa-lightbulb"></i> Educational Insight:</h4>
+      <p id="explanationText" style="color: var(--text-primary); font-size: 0.95rem;">${q.explanation}</p>
     </div>
 
     <div class="quiz-footer">
-      <span style="color: var(--text-muted); font-size: 0.85rem;">Select your response to proceed</span>
+      <span style="color: var(--text-muted); font-size: 0.85rem;">Select your answer to proceed</span>
       <button class="btn btn-primary" id="nextQuestionBtn" onclick="nextQuestion()" disabled>
         Next Question <i class="fas fa-arrow-right"></i>
       </button>
@@ -190,7 +210,6 @@ function selectAnswer(selectedIndex) {
   if (isCorrect) {
     score++;
   }
-  userAnswers.push({ questionIndex: currentQuestionIndex, selected: selectedIndex, correct: isCorrect });
 
   const optionBtns = document.querySelectorAll('.option-btn');
   optionBtns.forEach((btn, idx) => {
@@ -206,13 +225,11 @@ function selectAnswer(selectedIndex) {
     }
   });
 
-  // Show explanation
   const expBox = document.getElementById('explanationBox');
   if (expBox) {
     expBox.style.display = 'block';
   }
 
-  // Enable Next button
   const nextBtn = document.getElementById('nextQuestionBtn');
   if (nextBtn) {
     nextBtn.disabled = false;
@@ -237,22 +254,32 @@ function renderQuizResults() {
   const total = QUIZ_QUESTIONS.length;
   const percentage = Math.round((score / total) * 100);
 
-  // High score tracking
   const previousHighScore = parseInt(localStorage.getItem('quiz_high_score') || '0', 10);
   if (score > previousHighScore) {
     localStorage.setItem('quiz_high_score', score);
   }
   const highScore = Math.max(score, previousHighScore);
 
-  let feedbackTitle = "Sanitization Master!";
-  let feedbackMessage = "Outstanding! You possess comprehensive awareness about personal hygiene, water safety, and disease prevention.";
-  
-  if (percentage < 50) {
-    feedbackTitle = "Keep Learning!";
-    feedbackMessage = "Good attempt! Review our Sanitization and Health Awareness pages to boost your health literacy score.";
-  } else if (percentage < 80) {
-    feedbackTitle = "Great Awareness!";
-    feedbackMessage = "Solid job! You have strong foundational knowledge in health and sanitation practices.";
+  let awarenessTitle = "";
+  let awarenessBadgeClass = "";
+  let feedbackMessage = "";
+
+  if (percentage <= 40) {
+    awarenessTitle = "Needs More Awareness";
+    awarenessBadgeClass = "badge-rose";
+    feedbackMessage = "Good attempt! You can greatly improve your health literacy by exploring our Safe Water and Sanitization modules.";
+  } else if (percentage <= 70) {
+    awarenessTitle = "Good Awareness";
+    awarenessBadgeClass = "badge-amber";
+    feedbackMessage = "Solid foundational knowledge! Review a few preventive hygiene practices to reach champion level.";
+  } else if (percentage <= 90) {
+    awarenessTitle = "Excellent Awareness";
+    awarenessBadgeClass = "badge-blue";
+    feedbackMessage = "Impressive score! You demonstrate a strong understanding of public health, safe drinking water, and sanitization.";
+  } else {
+    awarenessTitle = "Health Awareness Champion";
+    awarenessBadgeClass = "badge-green";
+    feedbackMessage = "Outstanding! You possess exemplary public health awareness and can lead hygiene initiatives in your community.";
   }
 
   quizBox.innerHTML = `
@@ -262,13 +289,19 @@ function renderQuizResults() {
         <span class="score-label">${percentage}%</span>
       </div>
 
-      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-primary);">${feedbackTitle}</h2>
-      <p style="color: var(--text-secondary); margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+      <div style="margin-bottom: 1rem;">
+        <span class="badge ${awarenessBadgeClass}" style="font-size: 1rem; padding: 0.5rem 1.25rem;">
+          <i class="fas fa-award"></i> Level: ${awarenessTitle}
+        </span>
+      </div>
+
+      <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.75rem; color: var(--text-primary);">Quiz Complete!</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem; max-width: 520px; margin-left: auto; margin-right: auto; font-size: 1.05rem;">
         ${feedbackMessage}
       </p>
 
       <div style="background: var(--bg-secondary); border-radius: var(--radius-md); padding: 1rem; max-width: 400px; margin: 0 auto 2rem auto; border: 1px solid var(--border-color);">
-        <p style="font-size: 0.9rem; color: var(--text-secondary);">
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0;">
           <i class="fas fa-crown" style="color: var(--accent-amber);"></i> Personal Best: <strong>${highScore} / ${total}</strong>
         </p>
       </div>
@@ -278,7 +311,7 @@ function renderQuizResults() {
           <i class="fas fa-rotate-right"></i> Retake Quiz
         </button>
         <a href="sanitization.html" class="btn btn-secondary">
-          <i class="fas fa-book-open"></i> Review Hygiene Topics
+          <i class="fas fa-book-open"></i> Review Hygiene Guide
         </a>
       </div>
     </div>

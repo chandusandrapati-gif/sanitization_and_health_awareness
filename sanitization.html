@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
+  <!-- STICKY NAVIGATION BAR -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
@@ -25,15 +25,19 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="sanitization.html" class="nav-link active">Sanitization</a></li>
+        <li><a href="index.html#safe-water" class="nav-link">Safe Water</a></li>
         <li><a href="health-awareness.html" class="nav-link">Health Awareness</a></li>
         <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
         <li><a href="quiz.html" class="nav-link">Quiz</a></li>
         <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
-        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency Info</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
       </ul>
 
       <div class="nav-actions">
+        <a href="quiz.html" class="btn btn-sm btn-primary" style="display: inline-flex;">
+          <i class="fas fa-graduation-cap"></i> Take the Awareness Quiz
+        </a>
         <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
@@ -55,81 +59,23 @@
     </div>
   </header>
 
-  <!-- SECTION 1: 6-STEP HANDWASHING GUIDE -->
+  <!-- GUIDED HANDWASHING EXPERIENCE -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Hand Hygiene Protocol</span>
-        <h2 class="section-title">The 6 Steps of Proper Handwashing</h2>
-        <p class="section-description">Follow these 6 steps for at least 20 seconds to eliminate 99.9% of harmful bacteria and viruses from your hands.</p>
+        <span class="section-tag"><i class="fas fa-hands-bubbles"></i> Interactive Step-by-Step Guide</span>
+        <h2 class="section-title">The 9 Steps of Proper Handwashing</h2>
+        <p class="section-description">Follow this interactive guided tour to master all 9 steps for effective hand decontamination.</p>
       </div>
 
-      <div class="step-grid">
-        <!-- Step 1 -->
-        <div class="step-card">
-          <span class="step-number">1</span>
-          <div class="card-icon teal" style="margin-bottom:1rem;">
-            <i class="fas fa-faucet-drip"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Wet Hands</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Wet your hands thoroughly with clean, running water (warm or cold).</p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="step-card">
-          <span class="step-number">2</span>
-          <div class="card-icon teal" style="margin-bottom:1rem;">
-            <i class="fas fa-pump-soap"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Apply Soap</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Apply enough liquid, bar, or foam soap to cover all hand surfaces completely.</p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="step-card">
-          <span class="step-number">3</span>
-          <div class="card-icon teal" style="margin-bottom:1rem;">
-            <i class="fas fa-hands-bubbles"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Rub Palms Together</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Rub palm to palm to generate rich foam and lather across both hands.</p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="step-card">
-          <span class="step-number">4</span>
-          <div class="card-icon teal" style="margin-bottom:1rem;">
-            <i class="fas fa-hand-holding-hand"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Interlace & Scrub</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Scrub between fingers, backs of hands, thumbs, and fingertips under nails for 20 seconds.</p>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="step-card">
-          <span class="step-number">5</span>
-          <div class="card-icon teal" style="margin-bottom:1rem;">
-            <i class="fas fa-hand-holding-droplet"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Rinse thoroughly</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Rinse all residual soap and loosened germs away with clean running water.</p>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="step-card">
-          <span class="step-number">6</span>
-          <div class="card-icon teal" style="margin-bottom:1rem;">
-            <i class="fas fa-box-tissue"></i>
-          </div>
-          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Dry Completely</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Dry hands thoroughly with a clean single-use towel or fresh air dryer.</p>
-        </div>
+      <div id="handwashExperienceBox">
+        <!-- Loaded via js/handwash.js -->
       </div>
     </div>
   </section>
 
-  <!-- SECTION 2: SAFE DRINKING WATER & FOOD HYGIENE -->
-  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+  <!-- SAFE DRINKING WATER & FOOD HYGIENE -->
+  <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
       <div class="grid-2">
         <!-- Water Safety Card -->
@@ -142,7 +88,7 @@
           <ul style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); font-size: 0.95rem;">
             <li><strong style="color:var(--text-primary);"><i class="fas fa-fire" style="color:var(--accent-amber);"></i> Rolling Boil:</strong> Boil water for at least 1 full minute to kill viruses, bacteria, and cysts.</li>
             <li><strong style="color:var(--text-primary);"><i class="fas fa-filter" style="color:var(--accent-blue);"></i> Filtration:</strong> Use activated carbon or reverse osmosis (RO) filters for sediment and heavy metal removal.</li>
-            <li><strong style="color:var(--text-primary);"><i class="fas fa-box" style="color:var(--accent-teal);"></i> Clean Storage:</strong> Store treated water in covered, narrow-mouthed vessels to avoid hand contact.</li>
+            <li><strong style="color:var(--text-primary);"><i class="fas fa-box" style="color:var(--accent-teal);"></i> Clean Storage:</strong> Store treated water in covered, narrow-mouthed vessels with dispensing taps.</li>
           </ul>
         </div>
 
@@ -152,18 +98,18 @@
             <i class="fas fa-utensils"></i>
           </div>
           <h3 class="card-title">Food Hygiene & Safety</h3>
-          <p class="card-text">Prevent foodborne illnesses and food poisoning by practicing the 4 WHO core food safety principles.</p>
+          <p class="card-text">Prevent foodborne illnesses and food poisoning by practicing core food safety principles.</p>
           <ul style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); font-size: 0.95rem;">
             <li><strong style="color:var(--text-primary);"><i class="fas fa-sparkles" style="color:var(--accent-teal);"></i> Clean:</strong> Wash hands, counters, and utensils thoroughly before and after preparing food.</li>
             <li><strong style="color:var(--text-primary);"><i class="fas fa-scissors" style="color:var(--accent-rose);"></i> Separate:</strong> Keep raw meats separate from cooked items to prevent cross-contamination.</li>
-            <li><strong style="color:var(--text-primary);"><i class="fas fa-temperature-high" style="color:var(--accent-amber);"></i> Cook:</strong> Cook foods to proper safe internal temperatures to destroy bacterial toxins.</li>
+            <li><strong style="color:var(--text-primary);"><i class="fas fa-temperature-high" style="color:var(--accent-amber);"></i> Cook:</strong> Cook foods to proper internal temperatures to destroy bacterial toxins.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: WASTE SEGREGATION GUIDE (3-BIN SYSTEM) -->
+  <!-- WASTE SEGREGATION GUIDE -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -260,7 +206,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project.</p>
+        <p>&copy; 2026 HygienePulse | Sanitization & Health Awareness Portal | CSE Project Presentation.</p>
       </div>
     </div>
   </footer>
@@ -269,6 +215,8 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/handwash.js"></script>
 </body>
 </html>

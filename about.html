@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
+  <!-- STICKY NAVIGATION BAR -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
@@ -25,15 +25,19 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="sanitization.html" class="nav-link">Sanitization</a></li>
+        <li><a href="index.html#safe-water" class="nav-link">Safe Water</a></li>
         <li><a href="health-awareness.html" class="nav-link">Health Awareness</a></li>
         <li><a href="tips.html" class="nav-link">Daily Tips</a></li>
         <li><a href="quiz.html" class="nav-link">Quiz</a></li>
         <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
-        <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+        <li><a href="emergency.html" class="nav-link">Emergency Info</a></li>
         <li><a href="about.html" class="nav-link active">About</a></li>
       </ul>
 
       <div class="nav-actions">
+        <a href="quiz.html" class="btn btn-sm btn-primary" style="display: inline-flex;">
+          <i class="fas fa-graduation-cap"></i> Take the Awareness Quiz
+        </a>
         <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
@@ -47,10 +51,10 @@
   <!-- PAGE HEADER -->
   <header style="background: radial-gradient(circle at top right, var(--accent-teal-light), transparent 60%); padding: 3rem 0; border-bottom: 1px solid var(--border-color);">
     <div class="container text-center" style="text-align: center;">
-      <span class="section-tag"><i class="fas fa-code"></i> CSE Mini-Project</span>
+      <span class="section-tag"><i class="fas fa-code"></i> CSE Mini-Project Presentation</span>
       <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">About Sanitization & Health Portal</h1>
       <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
-        Developed as an academic Computer Science & Engineering (CSE) web development mini-project demonstrating modern frontend technology, responsive UI/UX, and client-side storage.
+        Developed as an academic Computer Science & Engineering (CSE) web development project demonstrating modern UI/UX design, interactive public health tools, and client-side web technologies.
       </p>
     </div>
   </header>
@@ -65,11 +69,11 @@
             <i class="fas fa-bullseye"></i>
           </div>
           <h3 class="card-title">Project Mission & Objectives</h3>
-          <p class="card-text">To empower students, families, and communities with clear, accessible, and actionable health education to reduce preventable hygiene-related illnesses.</p>
+          <p class="card-text">"Awareness begins with simple habits." Empowering students, families, and communities with clear, accessible, and actionable health education to reduce preventable hygiene-related illnesses.</p>
           <ul style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); font-size: 0.95rem;">
-            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Interactive Quiz Engine:</strong> Self-assessment tool with real-time scoring.</li>
-            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Daily Rotator & Favorites:</strong> LocalStorage tip bookmarking system.</li>
-            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Responsive Design:</strong> Optimized for smartphones, tablets, and desktops.</li>
+            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Safe Drinking Water Portal:</strong> Interactive pipeline visualizer and water safety checker.</li>
+            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Handwashing Experience:</strong> 9-step guided visual handwashing tour.</li>
+            <li><i class="fas fa-circle-check" style="color:var(--accent-teal);"></i> <strong>Interactive Quiz Engine:</strong> Self-assessment tool with real-time scoring & awareness level tiers.</li>
           </ul>
         </div>
 
@@ -83,8 +87,8 @@
           
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
             <span class="badge badge-teal"><i class="fab fa-html5"></i> HTML5 Semantic Elements</span>
-            <span class="badge badge-blue"><i class="fab fa-css3-alt"></i> CSS3 Variables & Flex/Grid</span>
-            <span class="badge badge-amber"><i class="fab fa-js"></i> Vanilla ES6 JavaScript</span>
+            <span class="badge badge-blue"><i class="fab fa-css3-alt"></i> CSS3 Custom Variables & Responsive Grid</span>
+            <span class="badge badge-amber"><i class="fab fa-js"></i> Modular Vanilla ES6 JavaScript</span>
             <span class="badge badge-green"><i class="fas fa-database"></i> Browser LocalStorage API</span>
             <span class="badge badge-rose"><i class="fas fa-icons"></i> Font Awesome 6 Icons</span>
           </div>
@@ -115,7 +119,7 @@
 
           <div class="form-group">
             <label class="form-label" for="cSubject">Subject</label>
-            <input type="text" id="cSubject" class="form-control" placeholder="e.g. Suggestion for Quiz Question" required>
+            <input type="text" id="cSubject" class="form-control" placeholder="e.g. Suggestion for Safe Water Module" required>
           </div>
 
           <div class="form-group">
@@ -142,7 +146,7 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
-              No. All data including saved favorite tips, light/dark mode preference, and quiz high scores are stored locally inside your browser using the HTML5 <code>localStorage</code> API. No server is required.
+              No. All data including saved favorite tips, light/dark mode preference, and quiz high scores are stored locally inside your browser using the HTML5 <code>localStorage</code> API. No personal data is transmitted.
             </div>
           </div>
 
@@ -158,7 +162,7 @@
 
           <div class="accordion-item">
             <button class="accordion-header">
-              <span>Can I use this codebase for my CSE mini-project?</span>
+              <span>Can I use this codebase for my CSE project presentation?</span>
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
@@ -189,7 +193,7 @@
             <div class="logo-icon"><i class="fas fa-hand-holding-droplet"></i></div>
             <span>HygienePulse</span>
           </a>
-          <p>An educational web portal promoting public sanitization, personal hygiene, and health awareness. CSE Mini-Project.</p>
+          <p>An educational web portal promoting public sanitization, personal hygiene, and health awareness. CSE Project Presentation.</p>
         </div>
 
         <div>
@@ -208,7 +212,7 @@
             <li><a href="quiz.html">Awareness Quiz</a></li>
             <li><a href="campaigns.html">Campaign Calendar</a></li>
             <li><a href="emergency.html">Emergency Contacts</a></li>
-            <li><a href="about.html">About & Contact</a></li>
+            <li><a href="about.html">About Project</a></li>
           </ul>
         </div>
 
@@ -219,7 +223,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Sanitization & Health Awareness Portal | CSE Mini-Project.</p>
+        <p>&copy; 2026 HygienePulse | Sanitization & Health Awareness Portal | CSE Project Presentation.</p>
       </div>
     </div>
   </footer>
