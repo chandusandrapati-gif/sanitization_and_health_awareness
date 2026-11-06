@@ -49,7 +49,8 @@ function initMobileMenu() {
   const navMenu = document.getElementById('navMenu');
 
   if (hamburgerBtn && navMenu) {
-    hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       navMenu.classList.toggle('active');
       const isOpen = navMenu.classList.contains('active');
       hamburgerBtn.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
@@ -60,6 +61,20 @@ function initMobileMenu() {
         navMenu.classList.remove('active');
         hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        navMenu.classList.remove('active');
+        hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      }
     });
   }
 }
