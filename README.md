@@ -17,6 +17,9 @@ Built with **HTML5, CSS3, Vanilla JavaScript, LocalStorage API**, and **Font Awe
   - **"Is Your Water Safe?" Checker**: 4-question educational questionnaire with scoring and safety recommendations.
   - **9-Step Interactive Handwashing Experience**: Guided visual tour with progress bar and completion badge.
   - **Awareness Impact Dashboard**: Animated count-up metrics for project scope.
+  - **Community Feedback & Rating System**: Interactive 5-star rating submission form, 5-second rotating spotlight carousel, rating analytics summary, category filtering, and demo/duplicate test indicators.
+- **Dedicated Feedback Page (`feedback.html`)**:
+  - Full-page standalone portal for community reviews, star ratings, filtering, and student feedback submission.
 - **Sanitization Awareness (`sanitization.html`)**:
   - Interactive 9-step handwashing guide, drinking water purification methods, food safety principles, toilet hygiene, and 3-bin waste segregation rules (Green Wet, Blue Dry, Red Hazardous).
 - **Health Awareness (`health-awareness.html`)**:
@@ -58,6 +61,7 @@ sanitization-health-awareness/
 ├── quiz.html
 ├── campaigns.html
 ├── emergency.html
+├── feedback.html
 ├── about.html
 ├── BACKUP_README.md
 ├── README.md
@@ -67,6 +71,7 @@ sanitization-health-awareness/
 │
 ├── js/
 │   ├── main.js
+│   ├── feedback.js
 │   ├── quiz.js
 │   ├── tips.js
 │   ├── water-checker.js

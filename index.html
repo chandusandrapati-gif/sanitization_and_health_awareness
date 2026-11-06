@@ -34,6 +34,7 @@
         <li><a href="quiz.html" class="nav-link">Quiz</a></li>
         <li><a href="campaigns.html" class="nav-link">Campaigns</a></li>
         <li><a href="emergency.html" class="nav-link">Emergency Info</a></li>
+        <li><a href="#feedback" class="nav-link">Feedback</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
       </ul>
 
@@ -383,6 +384,209 @@
     </div>
   </section>
 
+  <!-- ==========================================================================
+       COMMUNITY & VISITOR FEEDBACK SYSTEM
+       ========================================================================== -->
+  <section id="feedback" class="section feedback-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-comments"></i> Visitor & Student Reviews</span>
+        <h2 class="section-title">Community Feedback & Ratings</h2>
+        <p class="section-description">
+          Share your feedback, report observations on health awareness content, or suggest new hygiene topics. Every review helps improve our educational outreach.
+        </p>
+      </div>
+
+      <!-- Top Row: 5-Second Rotating Spotlight Widget & Feedback Submission Form -->
+      <div class="feedback-layout-grid">
+        <!-- 1. Rotating Feedback Widget (Spotlight Carousel) -->
+        <div class="spotlight-widget-wrapper" id="rotatingFeedbackWidget" role="region" aria-roledescription="carousel" aria-label="Featured Community Reviews">
+          <div class="spotlight-widget-header">
+            <div class="spotlight-widget-title">
+              <i class="fas fa-star"></i> Featured Review Spotlight
+            </div>
+            <div class="spotlight-header-actions">
+              <span class="carousel-counter-badge" id="carouselCounterBadge">1 of 7</span>
+              <span class="carousel-pause-indicator" id="carouselPauseIndicator"><i class="fas fa-pause"></i> Paused</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Single Card Container -->
+          <div id="carouselCardContainer" aria-live="polite">
+            <!-- Dynamically populated by js/feedback.js -->
+          </div>
+
+          <!-- Carousel Controls: Prev, Next & Dots -->
+          <div class="spotlight-controls">
+            <button class="carousel-nav-btn" id="prevFeedbackBtn" aria-label="Previous review">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-dots" id="carouselPaginationDots" role="tablist">
+              <!-- Dynamically populated dots -->
+            </div>
+            <button class="carousel-nav-btn" id="nextFeedbackBtn" aria-label="Next review">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Interactive Feedback Submission Form -->
+        <div class="feedback-form-card">
+          <!-- In-card Success Banner (Shown after submission) -->
+          <div id="feedbackSuccessMessage" class="feedback-success-banner" role="alert">
+            <div class="success-icon-box">
+              <i class="fas fa-check"></i>
+            </div>
+            <div>
+              <div class="success-title">Feedback Submitted Successfully!</div>
+              <p class="success-desc">Thank you for helping us improve our health awareness portal. Your review is now live below.</p>
+              <button type="button" class="btn btn-sm btn-outline" id="writeAnotherFeedbackBtn">
+                <i class="fas fa-pen"></i> Submit Another Review
+              </button>
+            </div>
+          </div>
+
+          <div class="form-header-box">
+            <h3><i class="fas fa-pen-fancy" style="color:var(--accent-teal);"></i> Leave Your Feedback</h3>
+            <p>Tell us how HygienePulse helped your awareness or classroom learning.</p>
+          </div>
+
+          <form id="feedbackForm" novalidate>
+            <!-- Visitor Name -->
+            <div class="form-group">
+              <label class="form-label" for="fbName">
+                Student / Visitor Name <span style="color:var(--accent-rose);">*</span>
+              </label>
+              <input type="text" id="fbName" class="form-control" placeholder="e.g. Ananya Roy or Grade 10 Student" required>
+              <div id="nameError" class="field-error"></div>
+            </div>
+
+            <!-- Optional Role / Affiliation -->
+            <div class="form-group">
+              <label class="form-label" for="fbRole">
+                Role or Department (Optional)
+              </label>
+              <input type="text" id="fbRole" class="form-control" placeholder="e.g. Student, Teacher, Volunteer, Resident">
+            </div>
+
+            <!-- Star Rating Control (1-5 stars) -->
+            <div class="form-group">
+              <label class="form-label" id="starRatingGroupLabel">
+                Star Rating <span style="color:var(--accent-rose);">*</span>
+              </label>
+              <div class="star-rating-control" id="starRatingInput" role="radiogroup" aria-labelledby="starRatingGroupLabel">
+                <button type="button" class="star-btn" data-value="1" aria-label="1 star - Poor" role="radio" aria-checked="false"><i class="far fa-star"></i></button>
+                <button type="button" class="star-btn" data-value="2" aria-label="2 stars - Fair" role="radio" aria-checked="false"><i class="far fa-star"></i></button>
+                <button type="button" class="star-btn" data-value="3" aria-label="3 stars - Good" role="radio" aria-checked="false"><i class="far fa-star"></i></button>
+                <button type="button" class="star-btn" data-value="4" aria-label="4 stars - Very Good" role="radio" aria-checked="false"><i class="far fa-star"></i></button>
+                <button type="button" class="star-btn" data-value="5" aria-label="5 stars - Outstanding" role="radio" aria-checked="false"><i class="far fa-star"></i></button>
+                <span id="starRatingLabel" class="star-rating-hint">Select your rating</span>
+              </div>
+              <div id="ratingError" class="field-error"></div>
+            </div>
+
+            <!-- Category Dropdown -->
+            <div class="form-group">
+              <label class="form-label" for="fbCategory">
+                Feedback Category <span style="color:var(--accent-rose);">*</span>
+              </label>
+              <select id="fbCategory" class="form-control" required>
+                <option value="" disabled selected>-- Select Feedback Category --</option>
+                <option value="Safe Drinking Water">Safe Drinking Water</option>
+                <option value="Hand Hygiene & Sanitization">Hand Hygiene & Sanitization</option>
+                <option value="Health Awareness & Diseases">Health Awareness & Diseases</option>
+                <option value="Daily Tips & Quiz">Daily Tips & Quiz</option>
+                <option value="Website Design & Usability">Website Design & Usability</option>
+                <option value="Campus & Community Campaigns">Campus & Community Campaigns</option>
+                <option value="General Feedback">General Feedback</option>
+              </select>
+              <div id="categoryError" class="field-error"></div>
+            </div>
+
+            <!-- Feedback Message -->
+            <div class="form-group">
+              <label class="form-label" for="fbMessage">
+                Feedback Message <span style="color:var(--accent-rose);">*</span>
+              </label>
+              <textarea id="fbMessage" class="form-control" placeholder="Share your experience, what you learned, or suggestions for new health topics..." maxlength="500" required></textarea>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div id="messageError" class="field-error"></div>
+                <div id="fbCharCounter" class="char-counter">0 / 500 characters</div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary" id="submitFeedbackBtn" style="width: 100%;">
+              Submit Feedback <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Rating Analytics Summary Bar -->
+      <div class="feedback-summary-container">
+        <div class="analytics-score-box">
+          <div class="analytics-big-score" id="analyticsAvgScore">4.8</div>
+          <div class="stars-display" id="analyticsAvgStars" style="font-size: 1.35rem;"></div>
+          <div class="analytics-total-count" id="analyticsTotalCount">Based on community reviews</div>
+        </div>
+        <div class="analytics-bars-wrapper" id="analyticsRatingBars">
+          <!-- Populated by js/feedback.js -->
+        </div>
+      </div>
+
+      <!-- Filter Controls & Search Toolbar -->
+      <div class="feedback-filter-toolbar">
+        <div class="filter-pills-list" id="feedbackCategoryPills">
+          <button class="filter-pill active" data-category="All">All Reviews</button>
+          <button class="filter-pill" data-category="Safe Drinking Water">Safe Water</button>
+          <button class="filter-pill" data-category="Hand Hygiene & Sanitization">Sanitization</button>
+          <button class="filter-pill" data-category="Health Awareness & Diseases">Diseases</button>
+          <button class="filter-pill" data-category="Daily Tips & Quiz">Tips & Quiz</button>
+          <button class="filter-pill" data-category="Website Design & Usability">Design</button>
+          <button class="filter-pill" data-category="Campus & Community Campaigns">Campaigns</button>
+        </div>
+
+        <div class="filter-tools-right">
+          <div class="search-input-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" id="feedbackSearchInput" class="form-control" placeholder="Search feedback...">
+          </div>
+          <select id="feedbackRatingFilter" class="rating-filter-select" aria-label="Filter by star rating">
+            <option value="All">All Ratings</option>
+            <option value="5">5 Stars Only</option>
+            <option value="4">4 Stars Only</option>
+            <option value="3">3 Stars Only</option>
+            <option value="2">2 Stars Only</option>
+            <option value="1">1 Star Only</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Subtitle & Count -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.25rem;">
+        <span style="font-size:0.9rem; color:var(--text-secondary); font-weight:600;" id="feedbackFilteredCount">
+          Showing all reviews
+        </span>
+        <span class="badge badge-teal" style="font-size:0.75rem;">
+          <i class="fas fa-database"></i> Stored Locally in Browser
+        </span>
+      </div>
+
+      <!-- Feedback Cards Grid Wall -->
+      <div class="feedback-grid" id="feedbackCardsGrid">
+        <!-- Rendered by js/feedback.js -->
+      </div>
+
+      <!-- Admin / Demo Helper -->
+      <div class="feedback-admin-actions">
+        <span><i class="fas fa-info-circle"></i> Sample reviews are tagged with <span class="badge badge-demo" style="font-size:0.75rem;">Demo Feedback</span>. Repeated reviews for duplicate testing are marked with <span class="badge badge-duplicate" style="font-size:0.75rem;">Duplicate Test Entry</span>.</span>
+        <span>•</span>
+        <button id="resetFeedbackDataBtn" title="Reset feedback to sample dataset">Reset Demo Dataset</button>
+      </div>
+    </div>
+  </section>
+
   <!-- EXPANDED HEALTH TOPIC MODAL DIALOG -->
   <div id="topicModalOverlay" class="modal-overlay">
     <div class="modal-container">
@@ -480,5 +684,6 @@
   <script src="js/water-checker.js"></script>
   <script src="js/handwash.js"></script>
   <script src="js/tips.js"></script>
+  <script src="js/feedback.js"></script>
 </body>
 </html>
